@@ -6,7 +6,7 @@
     <meta name="author" content="Nathan Mesfin" />
     <meta name="description" content="Web Portfolio" />
     <link rel="icon" href="images/pageicon_code-1.png" />
-    <title>Home</title>
+    <title>Contact</title>
   </head>
   <body>
     <header>
@@ -33,13 +33,7 @@
         <form action="" class="contact__form">
           <div class="contact__form--nameDiv">
             <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your Name"
-              autofocus
-            />
+            <input type="text" id="name" name="name" required autofocus />
           </div>
           <div class="contact__form--emailDiv">
             <label for="name">Email</label>
@@ -47,7 +41,8 @@
               type="email"
               id="email"
               name="email"
-              placeholder="Your Email"
+              required
+              placeholder="example@mail.com"
               autofocus
             />
           </div>
@@ -55,6 +50,7 @@
             <label for="name">Your Message</label>
             <textarea
               name="message"
+              required
               id="message"
               cols="30"
               rows="10"
@@ -66,15 +62,39 @@
         </form>
       </section>
       <aside>
-        <li>
-          <img src="" alt="" width="" height="" />
-        </li>
-        <li>
-          <img src="" alt="" width="" height="" />
-        </li>
-        <li>
-          <img src="" alt="" width="" height="" />
-        </li>
+        <!-- PHONE -->
+        <picture>
+          <a href="tel:+251929115104">
+            <img
+              src="images/phone_icon.png"
+              alt="An icon of a phone"
+              width="50"
+              height="50"
+            />
+          </a>
+        </picture>
+        <!-- EMAIL -->
+        <picture>
+          <a href="mailto:natms24@gmail.com">
+            <img
+              src="images/email_icon.png"
+              alt="An icon of an open envelope"
+              width="50"
+              height="50"
+            />
+          </a>
+        </picture>
+        <!-- TELEGRAM -->
+        <picture>
+          <a href="https://t.me/the1StardustCrusader" target="_blanks">
+            <img
+              src="images/telegram_icon.png"
+              alt="Telegram Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+        </picture>
       </aside>
     </main>
     <footer>
