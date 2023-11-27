@@ -11,13 +11,13 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <a href="index.html">
-      <picture>
+      <picture class="header__picture">
         <img src="images/man.png" alt="Person Icon" width="100" height="100">
       </picture>
     </a>
-    <nav>
+    <nav class="header__nav">
       <ul>
         <li><a href="cv.html">CV</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -26,29 +26,29 @@
     </nav>
   </header>
   <main>
-    <section>
-      <h1>Contact Me</h1>
+    <section class="contact__section">
+      <h1 class="contact__h1">Contact Me</h1>
       <!-- setup a proper action -->
       <form action="https://httpbin.org/get" method="get" class="contact__form">
-        <div class="contact__form--nameDiv">
+        <div class="contact__form-nameDiv">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required autofocus>
         </div>
-        <div class="contact__form--emailDiv">
+        <div class="contact__form-emailDiv">
           <label for="name">Email</label>
           <input type="email" id="email" name="email" required placeholder="example@mail.com">
         </div>
-        <div class="contact__form--textareaDiv">
+        <div class="contact__form-textareaDiv">
           <label for="name">Your Message</label>
           <textarea name="message" required id="message" cols="30" rows="10"></textarea>
         </div>
         <!-- Implement functionality for button -->
-        <button type="submit">Send</button>
-        <button type="reset">Clear</button>
+        <button type="submit" class="button button--send">Send</button>
+        <button type="reset" class="button button--send">Clear</button>
       </form>
     </section>
-    <aside>
-      <ul>
+    <aside class="contact__aside">
+      <ul class="contact__aside-ul">
         <!-- PHONE -->
         <li>
           <a href="tel:+251929115104">
@@ -70,8 +70,8 @@
       </ul>
     </aside>
   </main>
-  <footer>
-    <p>Nathan Mesfin Shiferaw | 3rd Year Software Engineering Student</p>
+  <footer class="footer">
+    <p class="footer__p">Nathan Mesfin Shiferaw | 3rd Year Software Engineering Student</p>
   </footer>
 </body>
 
