@@ -1,104 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Nathan Mesfin" />
-    <meta name="description" content="Web Portfolio" />
-    <link rel="icon" href="images/pageicon_code-1.png" />
-    <title>Contact</title>
-  </head>
-  <body>
-    <header>
-      <a href="index.html">
-        <picture>
-          <img
-            src="images/man.png"
-            alt="Person Icon"
-            width="100px"
-            height="100px"
-          />
-        </picture>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="places.html">Places</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <form action="" class="contact__form">
-          <div class="contact__form--nameDiv">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required autofocus />
-          </div>
-          <div class="contact__form--emailDiv">
-            <label for="name">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              placeholder="example@mail.com"
-              autofocus
-            />
-          </div>
-          <div class="contact__form--textareaDiv">
-            <label for="name">Your Message</label>
-            <textarea
-              name="message"
-              required
-              id="message"
-              cols="30"
-              rows="10"
-            ></textarea>
-          </div>
-          <!-- Implement functionality for button -->
-          <button type="submit">Send</button>
-          <button type="reset">Clear</button>
-        </form>
-      </section>
-      <aside>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Nathan Mesfin">
+  <meta name="description" content="Web Portfolio">
+  <link rel="icon" href="images/pageicon_code-1.png">
+  <title>Contact</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <picture>
+        <img src="images/man.png" alt="Person Icon" width="100" height="100">
+      </picture>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="places.html">Places</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h1>Contact Me</h1>
+      <!-- setup a proper action -->
+      <form action="https://httpbin.org/get" method="get" class="contact__form">
+        <div class="contact__form--nameDiv">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autofocus>
+        </div>
+        <div class="contact__form--emailDiv">
+          <label for="name">Email</label>
+          <input type="email" id="email" name="email" required placeholder="example@mail.com">
+        </div>
+        <div class="contact__form--textareaDiv">
+          <label for="name">Your Message</label>
+          <textarea name="message" required id="message" cols="30" rows="10"></textarea>
+        </div>
+        <!-- Implement functionality for button -->
+        <button type="submit">Send</button>
+        <button type="reset">Clear</button>
+      </form>
+    </section>
+    <aside>
+      <ul>
         <!-- PHONE -->
-        <picture>
+        <li>
           <a href="tel:+251929115104">
-            <img
-              src="images/phone_icon.png"
-              alt="An icon of a phone"
-              width="50"
-              height="50"
-            />
+            <img src="images/phone_icon.png" alt="An icon of a phone" width="50" height="50">
           </a>
-        </picture>
+        </li>
         <!-- EMAIL -->
-        <picture>
+        <li>
           <a href="mailto:natms24@gmail.com">
-            <img
-              src="images/email_icon.png"
-              alt="An icon of an open envelope"
-              width="50"
-              height="50"
-            />
+            <img src="images/email_icon.png" alt="An icon of an open envelope" width="50" height="50">
           </a>
-        </picture>
+        </li>
         <!-- TELEGRAM -->
-        <picture>
-          <a href="https://t.me/the1StardustCrusader" target="_blanks">
-            <img
-              src="images/telegram_icon.png"
-              alt="Telegram Logo"
-              width="50"
-              height="50"
-            />
+        <li>
+          <a href="https://t.me/the1StardustCrusader" target="_blank">
+            <img src="images/telegram_icon.png" alt="Telegram Logo" width="50" height="50">
           </a>
-        </picture>
-      </aside>
-    </main>
-    <footer>
-      <p>Nathan Mesfin Shiferaw | 3rd Year Software Engineer</p>
-    </footer>
-  </body>
+        </li>
+      </ul>
+    </aside>
+  </main>
+  <footer>
+    <p>Nathan Mesfin Shiferaw | 3rd Year Software Engineering Student</p>
+  </footer>
+</body>
+
 </html>
