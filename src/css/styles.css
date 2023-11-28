@@ -1,0 +1,134 @@
+/* 
+---- FLEXBOX LAYOUT ---
+*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Open+Sans&family=Roboto&display=swap');
+
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    /* COLORS */
+    --BG-COLOR: #333;
+    --BG-COLOR-FOOTER: #2d2d2d;
+
+    --FONT-COLOR: rgb(204, 204, 204);
+
+    --LINK-COLOR: rgba(0, 255, 255, 0.755);
+    --LINK-COLOR-HOVER: rgb(0, 242, 255);
+    --LINK-COLOR-ACTIVE: rgba(0, 255, 255, 0.602);
+
+    /* FONT */
+    --HEADER-LINK-SIZE: 1.15rem;
+
+    /* SPACING */
+    --PADDING: 0.5rem;
+}
+
+/* BODY */
+
+body {
+    background: var(--BG-COLOR);
+    color: var(--FONT-COLOR);
+    font-family: 'Nunito Sans', 'Open Sans', 'Roboto', 'sans serif';
+
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+
+/* HEADER */
+
+.header {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--HEADER-LINK-SIZE);
+    background-color: var(--BG-COLOR);
+}
+
+.header__picture {
+    margin-left: 0.5vw;
+}
+
+.header__picture img {
+    width: 8.5vh;
+    height: 8.5vh;
+    margin: 0.75vh;
+    border: 0.1rem solid cyan;
+    border-radius: 50%;
+    padding: 0.15rem;
+}
+
+.header__nav {
+    position: relative;
+    width: 70vw;
+}
+
+.header__nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: 3vw;
+}
+
+.header__picture img:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.navlink {
+    padding: 1.5vw;
+}
+
+.navlink a {
+    text-decoration: none;
+    color: var(--LINK-COLOR);
+}
+
+.navlink a:hover,
+.navlink a:focus {
+    color: var(--LINK-COLOR-HOVER);
+    border-bottom: inset var(--LINK-COLOR-HOVER) 2.5px;
+}
+
+.navlink a:active {
+    color: var(--LINK-COLOR-ACTIVE);
+}
+
+/* MAIN */
+
+main {
+    width: 90vw;
+    margin: 2vh auto 0 auto;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--BG-COLOR-FOOTER);
+    font-size: 0.9rem;
+    height: 2.75rem;
+    position: relative;
+}
+
+.footer__p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+abbr {
+    text-decoration: none;
+}
