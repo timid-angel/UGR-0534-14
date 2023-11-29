@@ -1,5 +1,5 @@
 /* 
----- FLEXBOX LAYOUT ---
+---- FLEXBOX LAYOUT ----
 */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Open+Sans&family=Roboto&display=swap');
 
@@ -17,6 +17,7 @@
     --BG-COLOR-FOOTER: #2d2d2d;
 
     --FONT-COLOR: rgb(204, 204, 204);
+    --FONT-COLOR-HEADER: rgb(10, 171, 171);
 
     --LINK-COLOR: rgba(0, 255, 255, 0.755);
     --LINK-COLOR-HOVER: rgb(0, 242, 255);
@@ -108,9 +109,143 @@ body {
 
 /* MAIN */
 
+/* main layout */
 main {
-    width: 90vw;
-    margin: 2vh auto 0 auto;
+    width: 98vw;
+    margin: 1vh auto 0 auto;
+}
+
+.home__main {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* main header */
+h1 {
+    font-size: 3.5rem;
+}
+
+.home__h1 {
+    font-style: oblique;
+    text-align: center;
+    color: var(--FONT-COLOR-HEADER);
+    margin-bottom: 1vh;
+}
+
+/* main content */
+
+.home__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 5vw;
+    padding: 0 4vw;
+    margin-bottom: 5vh;
+}
+
+.home__article-picture img {
+    width: 200px;
+    height: 200px;
+}
+
+.home__article-div {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 2vw;
+}
+
+.home_link {
+    text-decoration: none;
+    color: var(--LINK-COLOR);
+}
+
+.home_link:hover,
+.home_link:focus {
+    color: var(--LINK-COLOR-HOVER);
+}
+
+.home_link:active {
+    color: var(--LINK-COLOR-ACTIVE);
+}
+
+/* books */
+.home__article--books {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    margin-bottom: 5vh
+}
+
+.home__article-h2--books {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.home__article-div--books {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home__article-figure--books {
+    margin-bottom: 3vh;
+}
+
+.home__article-figure--books img {
+    width: 306.7px;
+    height: 460px;
+    padding: 0.1rem;
+    border: 2px #151515 solid;
+}
+
+.home__article-figure--books figcaption {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+
+/* music */
+
+.home__article--music {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+
+.home__article-h2--music {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.home__article-div--music {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.home__article-figure--music {
+    width: 45vw;
+}
+
+.home__article-figure--music img {
+    width: 40vw;
+    height: auto;
+    border: 2px #151515 solid;
+}
+
+.home__article-figure--music figcaption {
+    text-align: center;
+}
+
+/* ------ BROKEN ------- */
+/* horizontal rule */
+.home__divider {
+    border: 5px cyan solid;
 }
 
 /* FOOTER */
