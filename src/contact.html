@@ -7,6 +7,7 @@
   <meta name="author" content="Nathan Mesfin">
   <meta name="description" content="Web Portfolio">
   <link rel="icon" href="images/pageicon_code-1.png">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Contact</title>
 </head>
 
@@ -19,34 +20,37 @@
     </a>
     <nav class="header__nav">
       <ul>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="places.html">Places</a></li>
+        <li class="navlink"><a href="cv.html">CV</a></li>
+        <li class="navlink"><a href="projects.html">Projects</a></li>
+        <li class="navlink"><a href="places.html">Places</a></li>
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="contact__main">
+    <h1 class="cv__h1 contact__h1">Contact Me</h1>
     <section class="contact__section">
-      <h1 class="contact__h1">Contact Me</h1>
       <!-- setup a proper action -->
       <form action="https://httpbin.org/get" method="get" class="contact__form">
-        <div class="contact__form-nameDiv">
+        <div class="contact__form-div contact__form-name">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required autofocus>
         </div>
-        <div class="contact__form-emailDiv">
+        <div class="contact__form-div contact__form-email">
           <label for="name">Email</label>
-          <input type="email" id="email" name="email" required placeholder="example@mail.com">
+          <input type="email" id="email" name="email" required>
         </div>
-        <div class="contact__form-textareaDiv">
-          <label for="name">Your Message</label>
+        <div class="contact__form-div contact__form-textarea">
+          <label for="name">Message</label>
           <textarea name="message" required id="message" cols="30" rows="10"></textarea>
         </div>
         <!-- Implement functionality for button -->
-        <button type="submit" class="button button--send">Send</button>
-        <button type="reset" class="button button--send">Clear</button>
+        <div class="buttons">
+          <button type="submit" class="button button--send">Send</button>
+          <button type="reset" class="button button--clear">Clear</button>
+        </div>
       </form>
     </section>
+    <hr class="home_divider">
     <aside class="contact__aside">
       <ul class="contact__aside-ul">
         <!-- PHONE -->
@@ -71,7 +75,7 @@
     </aside>
   </main>
   <footer class="footer">
-    <p class="footer__p">Nathan Mesfin Shiferaw | 3rd Year Software Engineering Student</p>
+    <p class="footer__p">Nathan M.S. | 3rd-Year <abbr title="Software Engineer">SE</abbr></p>
   </footer>
 </body>
 
