@@ -14,12 +14,17 @@
 /* VARIABLES */
 :root {
     /* COLORS */
-    --BG-COLOR: #333;
-    --BG-COLOR-FOOTER: #2d2d2d;
+    --BG-COLOR: linear-gradient(to right, #151517, #2e2e2e, #151517);
+    --BG-COLOR-FOOTER: #212121;
 
     --FONT-COLOR: rgb(204, 204, 204);
-    --FONT-COLOR-HEADER: rgb(10, 171, 171);
-    --FONT-COLOR-HEADER-2: rgb(159, 42, 159);
+    --FONT-COLOR-HEADER:
+        linear-gradient(to right,
+            var(--FONT-COLOR-HEADER-2),
+            #e226e2,
+            rgb(31, 149, 149),
+            rgb(143, 16, 178));
+    --FONT-COLOR-HEADER-2: rgb(10, 171, 171);
     --TEXT-SHADOW-HEADER-2: 0.5px 0.5px rgba(110, 21, 110, 0.511);
 
     --BUTTON-PRIMARY: linear-gradient(180deg, purple, rgb(95, 3, 95));
@@ -29,13 +34,14 @@
     --LINK-COLOR-HOVER: rgb(0, 242, 255);
     --LINK-COLOR-ACTIVE: rgba(0, 255, 255, 0.602);
 
-    --CARD-GRADIENT:
+    /* --CARD-GRADIENT:
         linear-gradient(315deg,
             #333 2%,
             rgb(62, 13, 62) 5%,
             rgb(62, 13, 62),
             purple 90%,
-            rgb(186, 14, 186) 99%);
+            rgb(186, 14, 186) 99%); */
+    --CARD-GRADIENT: linear-gradient(315deg, #23344e 0%, #202029 74%);
 
     /* FONT */
     --HEADER-LINK-SIZE: 1.15rem;
@@ -47,7 +53,6 @@ body {
     background: var(--BG-COLOR);
     color: var(--FONT-COLOR);
     font-family: 'Nunito Sans', 'Open Sans', 'Roboto', 'sans serif';
-
     min-height: 100vh;
     display: flex;
     flex-flow: column nowrap;
@@ -57,11 +62,12 @@ body {
 /* HEADER */
 
 .header {
-    height: 10vh;
+    height: 12vh;
     display: flex;
     justify-content: space-between;
     font-size: var(--HEADER-LINK-SIZE);
     background-color: var(--BG-COLOR);
+    border-bottom: 2px rgb(165, 165, 165) inset;
 }
 
 .header__picture {
@@ -74,7 +80,7 @@ body {
     margin: 0.75vh;
     border: 0.1rem solid cyan;
     border-radius: 50%;
-    padding: 0.15rem;
+    padding: 0.1rem;
 }
 
 .header__nav {
@@ -110,7 +116,7 @@ body {
 .navlink a:hover,
 .navlink a:focus {
     color: var(--LINK-COLOR-HOVER);
-    border-bottom: inset var(--LINK-COLOR-HOVER) 2.5px;
+    border-bottom: inset var(--LINK-COLOR-HOVER) 1.2px;
 }
 
 .navlink a:active {
@@ -137,27 +143,36 @@ main {
 
 /* main header */
 h1 {
-    font-size: 3.5rem;
+    margin-top: 1.5vh;
+    font-size: 3rem;
+    background: var(--FONT-COLOR-HEADER);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .home__h1 {
     font-weight: lighter;
     text-align: center;
-    color: var(--FONT-COLOR-HEADER);
     margin-bottom: 1vh;
+}
+
+.home__article-h2--books,
+.home__article-h2--music {
+    color: var(--FONT-COLOR-HEADER-2);
 }
 
 .cv__h1 {
     text-align: center;
     font-size: 2rem;
-    color: var(--FONT-COLOR-HEADER);
 }
 
 .places__h2 {
     text-align: center;
-    font-size: 1.5rem;
-    color: var(--FONT-COLOR-HEADER);
+    font-size: 1.65rem;
     margin-bottom: 2vh;
+    background: var(--FONT-COLOR-HEADER);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .projects__h1 {
@@ -283,7 +298,7 @@ h1 {
 
 .cv__h2 {
     text-align: center;
-    color: var(--FONT-COLOR-HEADER);
+    color: var(--FONT-COLOR-HEADER-2);
 }
 
 .education {
@@ -375,10 +390,11 @@ h1 {
 .places__main {
     display: flex;
     flex-flow: column nowrap;
+    margin-top: 3vh;
 }
 
 .places__article-h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--FONT-COLOR-HEADER-2);
     text-shadow: var(--TEXT-SHADOW-HEADER-2);
 }
@@ -389,7 +405,7 @@ h1 {
 }
 
 .places__article-h3 {
-    margin: 0 auto 2vh auto;
+    margin: 0 auto 1vh auto;
     text-align: center;
 }
 
@@ -415,7 +431,7 @@ h1 {
 }
 
 .places__h2--visited {
-    margin-top: 5vh;
+    margin-top: 3vh;
 }
 
 /* projects */
@@ -434,13 +450,13 @@ h1 {
     display: block;
     width: 80vw;
     height: auto;
-    margin: 0 auto 3vh auto;
+    margin: 0 auto 1vh auto;
 }
 
 .projects__article-h3 {
     text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
     color: var(--FONT-COLOR-HEADER-2);
     text-shadow: var(--TEXT-SHADOW-HEADER-2);
 }
@@ -498,7 +514,7 @@ h1 {
 .contact__form-name input:focus,
 .contact__form-email input:focus,
 .contact__form-textarea textarea:focus {
-    outline: solid 4px var(--FONT-COLOR-HEADER-2);
+    outline: solid 4px rgb(117, 4, 117);
     border-radius: 4px;
 }
 
@@ -512,6 +528,7 @@ h1 {
 .button {
     font-family: inherit;
     font-size: 1.1rem;
+    font-weight: bold;
     color: whitesmoke;
     padding: 0.2rem 0.5rem;
     margin-left: 1rem;
@@ -556,7 +573,7 @@ h1 {
 
 /* horizontal rule */
 .home_divider {
-    border: 2px gray solid;
+    border: 1.5px gray solid;
     border-radius: 3%;
 }
 
@@ -567,6 +584,7 @@ h1 {
     font-size: 0.9rem;
     height: 2.75rem;
     position: relative;
+    border-top: 2px solid silver;
 }
 
 .footer__p {
