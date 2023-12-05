@@ -15,24 +15,25 @@
   <header class="header">
     <a href="index.html">
       <picture class="header__picture">
-        <img src="images/man.png" alt="Person Icon" width="100" height="100">
+        <img class="header__picture-img" src="images/man.png" alt="Person Icon" width="100" height="100">
       </picture>
     </a>
     <nav class="header__nav">
-      <ul class="header__nav-ul--3grid">
-        <li class="navlink"><a href="cv.html">CV</a></li>
-        <li class="navlink"><a href="places.html">Places</a></li>
-        <li class="navlink"><a href="contact.html">Contact</a></li>
+      <ul class="header__nav-ul">
+        <li class="header__nav-li"><a class="header__nav-a" href="cv.html">CV</a></li>
+        <li class="header__nav-li"><a class="header__nav-a" href="places.html">Places</a></li>
+        <li class="header__nav-li"><a class="header__nav-a" href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main class="projects__main">
-    <h1 class="cv__h1 projects__h1">Projects</h1>
+  <main class="projects">
+    <h1 class="projects__h1">Projects</h1>
     <!-- OPAL -->
     <article class="projects__article">
       <h3 class="projects__article-h3">Opal Hospital Database</h3>
       <picture class="projects__article-picture">
-        <img src="images/mysql_logo.png" alt="MySQL logo" width="300" height="300">
+        <img class="projects__article-picture-img" src="images/mysql_logo.png" alt="MySQL logo" width="300"
+          height="300">
       </picture>
       <aside>
         <p class="projects__article-aside-p">
@@ -45,7 +46,8 @@
     <article class="projects__article">
       <h3 class="projects__article-h3">Web-based Flappy Bird</h3>
       <picture class="projects__article-picture">
-        <img src="images/flappy.png" alt="Flappy Bird Image" width="325" height="260">
+        <img class="projects__article-picture-img" src="images/flappy.png" alt="Flappy Bird Image" width="325"
+          height="260">
       </picture>
       <aside>
         <p class="projects__article-aside-p">
@@ -57,7 +59,8 @@
     <article class="projects__article">
       <h3 class="projects__article-h3">Cardio Care</h3>
       <picture class="projects__article-picture">
-        <img src="images/med_logo.png" alt="Medical Facility - Standard Icon" width="300" height="300">
+        <img class="projects__article-picture-img" src="images/med_logo.png" alt="Medical Facility - Standard Icon"
+          width="300" height="300">
       </picture>
       <aside>
         <p class="projects__article-aside-p">
@@ -66,11 +69,11 @@
         </p>
       </aside>
     </article>
-    <hr class="home_divider projects__home_divider">
+    <hr class="hr projects__hr">
     <p class="projects__p--final">Perhaps there's more to come...</p>
   </main>
   <footer class="footer">
-    <p class="footer__p">Nathan M.S. | 3rd-Year <abbr title="Software Engineer">SE</abbr></p>
+    <p class="footer__p">Nathan M.S. | 3rd-Year <abbr class="footer__abbr" title="Software Engineer">SE</abbr></p>
   </footer>
 </body>
 

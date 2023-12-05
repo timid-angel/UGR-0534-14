@@ -15,67 +15,70 @@
   <header class="header">
     <a href="index.html">
       <picture class="header__picture">
-        <img src="images/man.png" alt="Person Icon" width="100" height="100">
+        <img class="header__picture-img" src="images/man.png" alt="Person Icon" width="100" height="100">
       </picture>
     </a>
     <nav class="header__nav">
-      <ul class="header__nav-ul--3grid">
-        <li class="navlink"><a href="cv.html">CV</a></li>
-        <li class="navlink"><a href="projects.html">Projects</a></li>
-        <li class="navlink"><a href="places.html">Places</a></li>
+      <ul class="header__nav-ul">
+        <li class="header__nav-li"><a class="header__nav-a" href="cv.html">CV</a></li>
+        <li class="header__nav-li"><a class="header__nav-a" href="projects.html">Projects</a></li>
+        <li class="header__nav-li"><a class="header__nav-a" href="places.html">Places</a></li>
       </ul>
     </nav>
   </header>
-  <main class="contact__main">
+  <main class="contact">
     <section class="contact__section">
-      <h1 class="cv__h1 contact__h1">Contact Me</h1>
+      <h1 class="contact__h1">Contact Me</h1>
       <!-- setup a proper action -->
       <form action="https://httpbin.org/get" method="get" class="contact__form">
         <div class="contact__form-div contact__form-name">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required autofocus>
+          <label class="contact__form-label" for="name">Name</label>
+          <input class="contact__form-input" type="text" id="name" name="name" required autofocus>
         </div>
         <div class="contact__form-div contact__form-email">
-          <label for="name">Email</label>
-          <input type="email" id="email" name="email" required>
+          <label class="contact__form-label" for="name">Email</label>
+          <input class="contact__form-input" type="email" id="email" name="email" required>
         </div>
-        <div class="contact__form-div contact__form-textarea">
-          <label for="name">Message</label>
-          <textarea name="message" required id="message" cols="30" rows="10"></textarea>
+        <div class="contact__form-div contact__form-message">
+          <label class="contact__form-label" for="name">Message</label>
+          <textarea class="contact__form-textarea" name="message" required id="message" cols="30" rows="10"></textarea>
         </div>
         <!-- Implement functionality for button -->
         <div class="buttons">
-          <button type="submit" class="button button--send">Send</button>
-          <button type="reset" class="button button--clear">Clear</button>
+          <button type="submit" class="buttons__button button--primary">Send</button>
+          <button type="reset" class="buttons__button button--secondary">Clear</button>
         </div>
       </form>
     </section>
-    <hr class="home_divider contact__home_divider">
+    <hr class="hr contact__hr">
     <aside class="contact__aside">
       <ul class="contact__aside-ul">
         <!-- PHONE -->
         <li>
           <a href="tel:+251929115104">
-            <img src="images/phone_icon.png" alt="An icon of a phone" width="50" height="50">
+            <img class="contact__aside-ul-img" src="images/phone_icon.png" alt="An icon of a phone" width="50"
+              height="50">
           </a>
         </li>
         <!-- EMAIL -->
         <li>
           <a href="mailto:natms24@gmail.com">
-            <img src="images/email_icon.png" alt="An icon of an open envelope" width="50" height="50">
+            <img class="contact__aside-ul-img" src="images/email_icon.png" alt="An icon of an open envelope" width="50"
+              height="50">
           </a>
         </li>
         <!-- TELEGRAM -->
         <li>
           <a href="https://t.me/the1StardustCrusader" target="_blank">
-            <img src="images/telegram_icon.png" alt="Telegram Logo" width="50" height="50">
+            <img class="contact__aside-ul-img" src="images/telegram_icon.png" alt="Telegram Logo" width="50"
+              height="50">
           </a>
         </li>
       </ul>
     </aside>
   </main>
   <footer class="footer">
-    <p class="footer__p">Nathan M.S. | 3rd-Year <abbr title="Software Engineer">SE</abbr></p>
+    <p class="footer__p">Nathan M.S. | 3rd-Year <abbr class="footer__abbr" title="Software Engineer">SE</abbr></p>
   </footer>
 </body>
 
