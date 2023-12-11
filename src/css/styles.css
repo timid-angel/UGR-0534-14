@@ -1283,13 +1283,18 @@ h1 {
     }
 
     .header__nav-ul {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .home__article {
+        width: min(90vw, 1900px);
         grid-template-columns: 1.5fr 1fr;
         grid-template-rows: 1fr;
-        margin-top: min(1.25rem, 5vh);
+        margin: min(1.25rem, 5vh) auto min(4rem, 5vh) auto;
+    }
+
+    .home__article-content {
+        grid-template-rows: 5rem;
     }
 
     .home__article-h2 {
@@ -1297,7 +1302,7 @@ h1 {
     }
 
     .home__article-p {
-        margin-top: min(1.5rem, 2.5vh);
+        margin-top: 0;
         font-size: 2rem;
     }
 
@@ -1331,7 +1336,7 @@ h1 {
 
     .books__container-figure-figcaption,
     .music__container-figure-figcaption {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     .books__container {
@@ -1353,27 +1358,28 @@ h1 {
 
     .music__container {
         margin-top: 4rem;
-        width: min(80vw, 1750px);
+        margin-bottom: 1.5rem;
+        width: min(60vw, 1467.2px);
         column-gap: 0;
         row-gap: 0;
     }
 
     .music__container-figure {
-        width: min(35vw, 765.625px);
+        width: min(25vw, 524px);
         margin-left: auto;
         margin-right: auto;
     }
 
     .music__container-figure-img {
-        width: min(35vw, 765.625px);
+        width: min(25vw, 524px);
     }
 
     .cv {
-        grid-template-rows: 7rem;
+        grid-template-rows: 5rem;
     }
 
     .cv__h1 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .education,
@@ -1387,7 +1393,7 @@ h1 {
 
     .education__card,
     .accomplishments__card {
-        width: min(700px, 30vw);
+        width: min(600px, 25vw);
         display: flex;
         flex-flow: column nowrap;
         margin-bottom: 1rem;
@@ -1395,7 +1401,7 @@ h1 {
 
     .education__card-picture-img,
     .accomplishments__card-picture-img {
-        width: min(24.5vw);
+        width: min(24.5vw, 490px);
     }
 
     .education__card-h3,
@@ -1416,8 +1422,8 @@ h1 {
     .skills {
         display: grid;
         grid-template-rows: 3rem 1fr;
-        column-gap: 5vw;
-        width: 80vw;
+        column-gap: min(10vw, 150px);
+        width: min(90vw, 2900px);
     }
 
     .skills .cv__h2 {
@@ -1425,7 +1431,7 @@ h1 {
     }
 
     .skills__article {
-        width: 75vw;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         font-size: 1.5rem;
@@ -1433,7 +1439,8 @@ h1 {
 
     .skills__article-card {
         display: flex;
-        width: min(450px, 35vw);
+        width: min(600px, 35vw);
+        margin-bottom: 2rem;
     }
 
     .skills__article-card:last-child {
@@ -1441,7 +1448,7 @@ h1 {
     }
 
     .skills__article-card-picture-img {
-        width: min(210px, 12.5vw);
+        width: min(187.5px, 12.5vw);
         margin: 0.5rem 0 0.5rem 1.25rem;
         border-radius: 4%;
     }
@@ -1465,7 +1472,7 @@ h1 {
 
     .projects__h1 {
         width: 100%;
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .projects__article {
@@ -1475,10 +1482,18 @@ h1 {
         margin: 0 auto 2.5rem auto;
     }
 
+    .projects__article:nth-child(2) {
+        margin-right: 2rem;
+    }
+
+    .projects__article:nth-child(3) {
+        border-left: solid silver 2px;
+    }
+
     .projects__article-h3 {
         width: 100%;
         margin-bottom: 1rem;
-        font-size: 2.5rem;
+        font-size: 2.1rem;
     }
 
     .projects__article-picture-img {
@@ -1493,7 +1508,7 @@ h1 {
 
     .projects__article-aside-p {
         width: min(22.5vw, 450px);
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -1509,7 +1524,7 @@ h1 {
 
     .projects__p--final {
         width: 100%;
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin: 1.5rem 0;
     }
 
@@ -1526,7 +1541,7 @@ h1 {
     }
 
     .places__h2 {
-        font-size: 5rem;
+        font-size: 3.5rem;
     }
 
     .places__article {
@@ -1538,7 +1553,7 @@ h1 {
     .places__article-h3 {
         width: 100%;
         margin-bottom: 1rem;
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
 
     .places__article-picture {
@@ -1556,6 +1571,10 @@ h1 {
         margin-top: 2.5%;
         margin-left: 5%;
         font-size: 1.6rem;
+    }
+
+    .places__article-aside-ul {
+        margin-left: 3rem;
     }
 
     .places__article:nth-child(3) .places__article-aside {
@@ -1652,7 +1671,145 @@ h1 {
     }
 
     .footer {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         height: 8vh;
+    }
+
+    /* Full HP Monitors and Large Screens */
+    @media screen and (min-width: 1600px) {
+        .header__nav-ul {
+            font-size: 3.rem;
+        }
+
+        .home__article-h2 {
+            font-size: 3.5rem;
+        }
+
+        .home__article-p {
+            margin-top: 0.5rem;
+            font-size: 2.5rem;
+        }
+
+        .home__article-content {
+            padding-top: 3rem;
+        }
+
+        .home__interests {
+            margin-bottom: min(4rem, 10vh);
+        }
+
+        .home__article-picture-img {
+            width: min(70vw, 400px);
+        }
+
+        .books__h2,
+        .music__h2 {
+            font-size: 4rem;
+        }
+
+        .books__container-figure-figcaption,
+        .music__container-figure-figcaption {
+            font-size: 2.8rem;
+        }
+
+        .books__container {
+            width: min(80vw, 1700px);
+            margin: 4.5rem auto 1rem auto;
+        }
+
+        .books__container-figure-img {
+            width: min(33vw, 700px);
+            height: min(47vw, 1040px);
+        }
+
+        .music__container {
+            margin-top: 5.5rem;
+        }
+
+        .education,
+        .accomplishments {
+            grid-template-rows: 5.5rem 1fr;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 1.5rem;
+        }
+
+        .education__card-h3,
+        .accomplishments__card-h3 {
+            font-size: 2.8rem;
+        }
+
+        .education__card-p {
+            font-size: 1.8rem;
+        }
+
+        .skills__article {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            column-gap: 3rem;
+        }
+
+        .skills__article {
+            font-size: 1.8rem;
+        }
+
+        .skills__article-h3 {
+            margin: 2rem 0.5rem;
+        }
+
+        .cv__h2 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .projects__article {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto 4.5rem auto;
+        }
+
+        .projects__article-h3 {
+            font-size: 2.2rem;
+        }
+
+        .projects__hr {
+            border-width: 0.05rem;
+        }
+
+        .projects__p--final {
+            font-size: 2.2rem;
+            margin: 2rem 0;
+        }
+
+        .places__article-picture {
+            width: min(60vw, 1500px);
+        }
+
+        .places__article-picture-img {
+            width: min(60vw, 1500px);
+            margin-left: min(5rem, 2vw);
+        }
+
+        .places__article-aside {
+            width: min(33vw, 825px);
+            margin-top: 4%;
+            font-size: 1.8rem;
+        }
+
+        .places__article:nth-child(3) .places__article-aside {
+            margin-top: 5%;
+        }
+
+        .places__article:nth-child(4) .places__article-aside {
+            margin-top: 3%;
+        }
+
+        .places__article:nth-child(7) .places__article-aside {
+            margin-top: 8%;
+        }
+
+        .places__article:last-child .places__article-aside {
+            margin-top: 8.5%;
+        }
     }
 }
