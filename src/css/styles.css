@@ -1,7 +1,3 @@
-/* 
----- GRID LAYOUT ----
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Open+Sans&family=Roboto&display=swap');
 
 /* CSS RESET */
@@ -98,7 +94,7 @@ body {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    margin-right: min(4rem, 10vw);
+    margin-right: min(1rem, 10vw);
 }
 
 .header__picture-img:hover {
@@ -142,10 +138,9 @@ main {
 h1 {
     margin-top: min(0.5rem, 1.5vh);
     font-size: 3rem;
-    background: var(--FONT-COLOR-HEADER);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--FONT-COLOR);
     text-align: center;
+    font-weight: normal;
 }
 
 .home__h1 {
@@ -175,9 +170,8 @@ h1 {
     text-align: center;
     font-size: 2rem;
     margin-top: min(0.5rem, 1.5vh);
-    background: var(--FONT-COLOR-HEADER);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--FONT-COLOR);
+    font-weight: normal;
 }
 
 .places__h2--visited {
@@ -361,21 +355,22 @@ h1 {
 
 .skills {
     display: grid;
-    width: min(100%, 700px);
+    width: min(90vw, 700px);
     grid-template-rows: min(3rem, 8vh) 1fr;
     margin: 0 auto min(1rem, 2vh) auto;
 }
 
 .skills__article {
     display: grid;
+    width: min(80vw, 700px);
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    font-size: 1.05rem;
-    margin: 1.5rem auto min(1.5rem, 2vh) auto;
+    font-size: 0.75rem;
+    margin: 0 auto min(1.5rem, 2vh) auto;
 }
 
 .skills__article-card {
-    width: min(300px, 42.5vw);
+    width: min(160px, 35vw);
     background: var(--CARD-GRADIENT);
     border-radius: 2%;
     text-align: center;
@@ -389,10 +384,10 @@ h1 {
 }
 
 .skills__article-card-picture-img {
-    width: min(210px, 32vw);
+    width: min(120px, 29.5vw);
     height: auto;
     display: block;
-    margin: min(3rem, 2vh) auto 1rem auto;
+    margin: 0.25rem auto 1rem auto;
     border-radius: 4%;
 }
 
@@ -592,6 +587,8 @@ h1 {
 /* Phone Landscape */
 
 @media screen and (min-width: 320px) and (max-width: 950px) and (orientation: landscape) {
+
+    /* body and headers  */
     body {
         grid-template-rows: 15vh 1fr 12vh;
     }
@@ -613,6 +610,7 @@ h1 {
         height: 12.5vh;
     }
 
+    /* home */
     .home__article {
         grid-template-columns: 1.5fr 1fr;
         grid-template-rows: 1fr;
@@ -675,6 +673,7 @@ h1 {
         margin-top: 2rem;
     }
 
+    /* cv */
     .cv__h1 {
         font-size: 3.5rem;
     }
@@ -763,6 +762,7 @@ h1 {
         text-align: center;
     }
 
+    /* projects */
     .projects {
         grid-template-rows: 5.25rem;
     }
@@ -805,14 +805,7 @@ h1 {
         margin: 1.5rem 0;
     }
 
-    .places__article-h3 {
-        font-size: 1.3rem;
-        color: var(--FONT-COLOR-HEADER-2);
-        text-shadow: var(--TEXT-SHADOW-HEADER-2);
-        margin: 0 auto min(0.5rem, 1vh) auto;
-        text-align: center;
-    }
-
+    /* places */
     .places {
         margin: 0;
     }
@@ -851,6 +844,7 @@ h1 {
         margin-top: 0;
     }
 
+    /* contact */
     .contact__hr {
         display: none;
     }
@@ -900,6 +894,8 @@ h1 {
 /* Tablets and small laptops */
 
 @media screen and (min-width: 951px) and (max-width: 1279px) {
+
+    /* body and headers */
     body {
         grid-template-rows: 12vh 1fr 8vh;
     }
@@ -922,6 +918,7 @@ h1 {
         font-size: 1.7rem;
     }
 
+    /* home */
     .home__article {
         grid-template-columns: 1.5fr 1fr;
         grid-template-rows: 1fr;
@@ -1000,6 +997,7 @@ h1 {
         width: 35vw;
     }
 
+    /* cv */
     .cv {
         grid-template-rows: 6.5rem;
     }
@@ -1088,6 +1086,7 @@ h1 {
         grid-column: 1 / 3;
     }
 
+    /* projects */
     .projects {
         grid-template-rows: 6.5rem;
     }
@@ -1130,14 +1129,7 @@ h1 {
         margin: 1.5rem 0;
     }
 
-    .places__article-h3 {
-        font-size: 1.3rem;
-        color: var(--FONT-COLOR-HEADER-2);
-        text-shadow: var(--TEXT-SHADOW-HEADER-2);
-        margin: 0 auto min(0.5rem, 1vh) auto;
-        text-align: center;
-    }
-
+    /* places */
     .places {
         margin: 0;
     }
@@ -1178,6 +1170,7 @@ h1 {
         margin-top: 2rem;
     }
 
+    /* contact */
     .contact__hr {
         display: none;
     }
@@ -1264,12 +1257,14 @@ h1 {
 /* Laptops and Desktops*/
 
 @media screen and (min-width: 1279px) {
+
+    /* body and headers */
     body {
         grid-template-rows: 10vh 1fr 8vh;
     }
 
     h1 {
-        font-size: 6rem;
+        font-size: 5.5rem;
     }
 
     .header {
@@ -1283,9 +1278,10 @@ h1 {
     }
 
     .header__nav-ul {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
+    /* home */
     .home__article {
         width: min(90vw, 1900px);
         grid-template-columns: 1.5fr 1fr;
@@ -1298,12 +1294,12 @@ h1 {
     }
 
     .home__article-h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .home__article-p {
         margin-top: 0;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .home__article-content {
@@ -1331,16 +1327,16 @@ h1 {
 
     .books__h2,
     .music__h2 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     .books__container-figure-figcaption,
     .music__container-figure-figcaption {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .books__container {
-        width: min(80vw, 1800px);
+        width: min(80vw, 1000px);
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         column-gap: 0;
@@ -1352,8 +1348,8 @@ h1 {
     }
 
     .books__container-figure-img {
-        width: min(35vw, 787.5px);
-        height: min(51vw, 1147.5px);
+        width: min(33vw, 400px);
+        height: min(47vw, 600px);
     }
 
     .music__container {
@@ -1374,6 +1370,7 @@ h1 {
         width: min(25vw, 524px);
     }
 
+    /* cv */
     .cv {
         grid-template-rows: 5rem;
     }
@@ -1386,7 +1383,7 @@ h1 {
     .accomplishments {
         grid-template-rows: 4rem 1fr;
         grid-template-columns: 1fr 1fr;
-        width: min(70vw, 1444px);
+        width: min(60vw, 1350px);
         margin-left: auto;
         margin-right: auto;
     }
@@ -1401,7 +1398,7 @@ h1 {
 
     .education__card-picture-img,
     .accomplishments__card-picture-img {
-        width: min(24.5vw, 490px);
+        width: min(20vw, 490px);
     }
 
     .education__card-h3,
@@ -1444,7 +1441,7 @@ h1 {
     }
 
     .skills__article-card:last-child {
-        grid-column: 1 / 3;
+        grid-column: 1 / 2;
     }
 
     .skills__article-card-picture-img {
@@ -1455,7 +1452,7 @@ h1 {
 
     .skills__article-h3 {
         width: 100%;
-        margin: 1.75rem 0.5rem;
+        margin: 2rem 0.5rem;
         text-align: center;
     }
 
@@ -1464,6 +1461,7 @@ h1 {
         grid-column: 1 / 3;
     }
 
+    /* projects */
     .projects {
         display: flex;
         flex-flow: row wrap;
@@ -1528,14 +1526,7 @@ h1 {
         margin: 1.5rem 0;
     }
 
-    .places__article-h3 {
-        font-size: 1.3rem;
-        color: var(--FONT-COLOR-HEADER-2);
-        text-shadow: var(--TEXT-SHADOW-HEADER-2);
-        margin: 0 auto min(0.5rem, 1vh) auto;
-        text-align: center;
-    }
-
+    /* places */
     .places {
         margin: 0;
     }
@@ -1553,7 +1544,7 @@ h1 {
     .places__article-h3 {
         width: 100%;
         margin-bottom: 1rem;
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
 
     .places__article-picture {
@@ -1593,21 +1584,18 @@ h1 {
         margin-top: 7.5%;
     }
 
+    /* contact */
     .contact__hr {
         display: none;
     }
 
     .contact__h1 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .contact {
         display: flex;
         width: min(80vw, 800px);
-    }
-
-    .contact__h1 {
-        font-size: 4rem;
     }
 
     .contact__section {
@@ -1677,17 +1665,11 @@ h1 {
 
     /* Full HP Monitors and Large Screens */
     @media screen and (min-width: 1600px) {
-        .header__nav-ul {
-            font-size: 3.rem;
-        }
 
-        .home__article-h2 {
-            font-size: 3.5rem;
-        }
-
+        /* home */
         .home__article-p {
             margin-top: 0.5rem;
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
 
         .home__article-content {
@@ -1702,30 +1684,15 @@ h1 {
             width: min(70vw, 400px);
         }
 
-        .books__h2,
-        .music__h2 {
-            font-size: 4rem;
-        }
-
-        .books__container-figure-figcaption,
-        .music__container-figure-figcaption {
-            font-size: 2.8rem;
-        }
-
         .books__container {
-            width: min(80vw, 1700px);
             margin: 4.5rem auto 1rem auto;
-        }
-
-        .books__container-figure-img {
-            width: min(33vw, 700px);
-            height: min(47vw, 1040px);
         }
 
         .music__container {
             margin-top: 5.5rem;
         }
 
+        /* cv */
         .education,
         .accomplishments {
             grid-template-rows: 5.5rem 1fr;
@@ -1735,7 +1702,7 @@ h1 {
 
         .education__card-h3,
         .accomplishments__card-h3 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
         }
 
         .education__card-p {
@@ -1745,8 +1712,7 @@ h1 {
         .skills__article {
             display: flex;
             flex-flow: row wrap;
-            justify-content: center;
-            column-gap: 3rem;
+            justify-content: flex-start;
         }
 
         .skills__article {
@@ -1762,14 +1728,11 @@ h1 {
             text-align: center;
         }
 
+        /* projects */
         .projects__article {
             display: flex;
             flex-wrap: wrap;
             margin: 0 auto 4.5rem auto;
-        }
-
-        .projects__article-h3 {
-            font-size: 2.2rem;
         }
 
         .projects__hr {
@@ -1777,10 +1740,11 @@ h1 {
         }
 
         .projects__p--final {
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin: 2rem 0;
         }
 
+        /* places */
         .places__article-picture {
             width: min(60vw, 1500px);
         }
@@ -1805,7 +1769,7 @@ h1 {
         }
 
         .places__article:nth-child(7) .places__article-aside {
-            margin-top: 8%;
+            margin-top: 2.5%;
         }
 
         .places__article:last-child .places__article-aside {
