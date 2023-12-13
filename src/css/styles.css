@@ -66,6 +66,7 @@ body {
     font-size: var(--HEADER-LINK-SIZE);
     background-color: var(--BG-COLOR);
     border-bottom: 2px rgb(165, 165, 165) inset;
+    position: relative;
 }
 
 .header__picture {
@@ -118,6 +119,25 @@ body {
 
 .header__nav-a:active {
     color: var(--LINK-COLOR-ACTIVE);
+}
+
+/* Styles for menu icon - to be modified with javascript */
+
+.header__menu {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: min(80px, 8.5vh);
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: min(7.5vw, 2rem);
+}
+
+.header__nav-ul--menu {
+    flex-flow: column nowrap;
+    background: var(--BG-COLOR);
+    position: absolute;
 }
 
 /* MAIN */
