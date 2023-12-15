@@ -3,6 +3,7 @@ const navUl = document.querySelector('.header__nav-ul');
 const button = document.querySelector('.header__button');
 let buttonActive = false;
 
+// event listener and handler for the nav button
 function clickHandler() {
     if (!buttonActive) {
         nav.setAttribute('style', 'display: static;');

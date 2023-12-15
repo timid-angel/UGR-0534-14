@@ -36,23 +36,27 @@
       <form class="contact__form">
         <div class="contact__form-div contact__form-name">
           <label class="contact__form-label" for="name">Name</label>
-          <input class="contact__form-input contact__form-input--name" type="text" id="name" name="name" required
-            autofocus>
+          <input class="contact__form-input contact__form-input--name" type="text" id="name" name="name" autofocus>
         </div>
+        <div class="contact__error contact__error--name">Please enter your name.</div>
         <div class="contact__form-div contact__form-email">
           <label class="contact__form-label" for="name">Email</label>
-          <input class="contact__form-input contact__form-input--email" type="email" id="email" name="email" required>
+          <input class="contact__form-input contact__form-input--email" type="text" id="email" name="email">
         </div>
+        <div class="contact__error contact__error--email">Please enter a valid email.</div>
         <div class="contact__form-div contact__form-message">
           <label class="contact__form-label" for="name">Message</label>
-          <textarea class="contact__form-textarea contact__form-textarea--message" name="message" required id="message"
-            cols="30" rows="10"></textarea>
+          <textarea class="contact__form-textarea contact__form-textarea--message" name="message" id="message" cols="30"
+            rows="10"></textarea>
         </div>
+        <div class="contact__error contact__error--message">Your message cannot be empty.</div>
         <!-- Implement functionality for button -->
         <div class="buttons">
           <button type="submit" class="buttons__button button--primary">Send</button>
           <button type="reset" class="buttons__button button--secondary">Clear</button>
         </div>
+        <div class="contact__success">Your message has been sent!</div>
+        <div class="contact__error contact__error--system">Your message has been sent!</div>
       </form>
     </section>
     <hr class="hr contact__hr">
@@ -86,6 +90,7 @@
     <p class="footer__p">Nathan M.S. | 3rd-Year <abbr class="footer__abbr" title="Software Engineer">SE</abbr></p>
   </footer>
   <script src="js/nav.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="js/contact.js" type="module"></script>
 </body>
 

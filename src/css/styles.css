@@ -370,7 +370,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     border: 3px #333 solid;
-    padding: 0.75rem;
+    padding: 0.35rem;
 }
 
 .music__container-figure-figcaption {
@@ -551,7 +551,7 @@ h1 {
 
 .contact__form-div {
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.7rem;
 }
 
 .contact__form-label {
@@ -575,7 +575,7 @@ h1 {
 
 .contact__form-input:focus,
 .contact__form-textarea:focus {
-    outline: solid 4px rgb(175, 12, 175);
+    outline: solid 3px rgb(175, 12, 175);
     border-radius: 4px;
 }
 
@@ -592,10 +592,10 @@ h1 {
     font-weight: bold;
     color: whitesmoke;
     padding: 0.2rem 0.5rem;
-    margin-left: auto;
     border: none;
     border-radius: 0.2rem;
     width: 4rem;
+    margin: 1rem 0 1rem auto;
 }
 
 .buttons__button:active {
@@ -633,6 +633,27 @@ h1 {
 .contact__aside-ul-img:active {
     transform: scale(0.9, 0.9);
 }
+
+/* Error message */
+
+.contact__error,
+.contact__success {
+    font-size: 0.85rem;
+    margin: 0 auto 0 3rem;
+    padding: 0.8rem 0.2rem;
+    background-color: crimson;
+    width: min(80%, 17rem);
+    text-align: center;
+    border-radius: 0.5rem;
+    color: whitesmoke;
+    display: none;
+}
+
+.contact__success {
+    background-color: green;
+    color: whitesmoke;
+}
+
 
 /* horizontal rule */
 .hr {
@@ -966,8 +987,15 @@ h1 {
     }
 
     .contact__form-input,
-    .contact__form-textarea {
+    .contact__form-textarea,
+    .contact__error,
+    .contact__success {
         width: min(80%, 27rem);
+    }
+
+    .contact__error,
+    .contact__success {
+        font-size: 0.9rem;
     }
 
     .footer {
@@ -1296,20 +1324,22 @@ h1 {
         margin-left: 3rem;
     }
 
-    .contact__form-input,
-    .contact__form-textarea {
-        width: min(80%, 25rem);
-    }
-
     .contact__form-label {
         font-size: 1.6rem;
         font-weight: normal;
     }
 
     .contact__form-input,
-    .contact__form-textarea {
+    .contact__form-textarea,
+    .contact__error,
+    .contact__success {
         width: min(80%, 27rem);
         font-size: 1.5rem;
+    }
+
+    .contact__error,
+    .contact__success {
+        font-size: 1.2rem;
     }
 
     .contact__form-input {
@@ -1716,9 +1746,16 @@ h1 {
     }
 
     .contact__form-input,
-    .contact__form-textarea {
+    .contact__form-textarea,
+    .contact__error,
+    .contact__success {
         width: min(80%, 27rem);
         font-size: 1.6rem;
+    }
+
+    .contact__error,
+    .contact__success {
+        font-size: 1.25rem;
     }
 
     .contact__form-input {
