@@ -18,7 +18,7 @@
         <img class="header__picture-img" src="images/man.png" alt="Person Icon" width="100" height="100">
       </picture>
     </a>
-    <button class="header__button">
+    <button class="header__button" type="button">
       <img src="images/icons8-menu.svg" alt="menu icon" class="header__menu">
     </button>
     <nav class="header__nav">
@@ -33,18 +33,20 @@
     <section class="contact__section">
       <h1 class="contact__h1">Contact Me</h1>
       <!-- setup a proper action -->
-      <form action="https://httpbin.org/get" method="get" class="contact__form">
+      <form class="contact__form">
         <div class="contact__form-div contact__form-name">
           <label class="contact__form-label" for="name">Name</label>
-          <input class="contact__form-input" type="text" id="name" name="name" required autofocus>
+          <input class="contact__form-input contact__form-input--name" type="text" id="name" name="name" required
+            autofocus>
         </div>
         <div class="contact__form-div contact__form-email">
           <label class="contact__form-label" for="name">Email</label>
-          <input class="contact__form-input" type="email" id="email" name="email" required>
+          <input class="contact__form-input contact__form-input--email" type="email" id="email" name="email" required>
         </div>
         <div class="contact__form-div contact__form-message">
           <label class="contact__form-label" for="name">Message</label>
-          <textarea class="contact__form-textarea" name="message" required id="message" cols="30" rows="10"></textarea>
+          <textarea class="contact__form-textarea contact__form-textarea--message" name="message" required id="message"
+            cols="30" rows="10"></textarea>
         </div>
         <!-- Implement functionality for button -->
         <div class="buttons">
@@ -83,7 +85,8 @@
   <footer class="footer">
     <p class="footer__p">Nathan M.S. | 3rd-Year <abbr class="footer__abbr" title="Software Engineer">SE</abbr></p>
   </footer>
-  <script src="js/index.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/contact.js" type="module"></script>
 </body>
 
 </html>
