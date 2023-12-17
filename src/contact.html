@@ -7,62 +7,80 @@
   <meta name="author" content="Nathan Mesfin">
   <meta name="description" content="Web Portfolio">
   <link rel="icon" href="images/pageicon_code-1.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <title>Contact</title>
 </head>
 
-<body>
-  <header class="header">
-    <a href="index.html">
-      <picture class="header__picture">
-        <img src="images/man.png" alt="Person Icon" width="100" height="100">
-      </picture>
-    </a>
-    <nav class="header__nav">
-      <ul>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="places.html">Places</a></li>
-      </ul>
+<body class="has-background-black has-shadow">
+  <header class="navbar is-black py-1 mb-6">
+    <div class="navbar-brand">
+      <a href="index.html"><img src="images/man.png" class="image" alt="Person Icon" width="48" height="48"></a>
+      <a class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <nav class="navbar-menu mt-1">
+      <div class="navbar-end">
+        <div><a href="cv.html" class="navbar-item has-text-primary">CV</a></div>
+        <div><a href="projects.html" class="navbar-item has-text-primary">Projects</a></div>
+        <div><a href="places.html" class="navbar-item has-text-primary">Places</a></div>
+      </div>
     </nav>
   </header>
-  <main>
-    <section class="contact__section">
-      <h1 class="contact__h1">Contact Me</h1>
+  <main class="has-background-black container columns is-variable is-multiline mx-auto mt-2 mb-6 has-text-white px-6">
+    <section class="column is-11 columns is-variable is-multiline">
+      <h1 class="column has-text-centered is-12 is-size-2">Contact Me</h1>
       <!-- setup a proper action -->
-      <form action="https://httpbin.org/get" method="get" class="contact__form">
-        <div class="contact__form-nameDiv">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required autofocus>
+      <form class="form mx-auto" action="https://httpbin.org/get" method="get">
+        <div class="field">
+          <label class="label has-text-white has-text-weight-normal is-size-5" for="name">Name</label>
+          <div class="control ml-5">
+            <input class="input is-primary is-normal" type="text" id="name" name="name" required autofocus>
+          </div>
         </div>
-        <div class="contact__form-emailDiv">
-          <label for="name">Email</label>
-          <input type="email" id="email" name="email" required placeholder="example@mail.com">
+        <div class="field">
+          <label class="label has-text-white has-text-weight-normal is-size-5" for="name">Email</label>
+          <div class="control ml-5">
+            <input class="input is-primary is-normal" type="email" id="email" name="email" required
+              placeholder="example@mail.com">
+          </div>
         </div>
-        <div class="contact__form-textareaDiv">
-          <label for="name">Your Message</label>
-          <textarea name="message" required id="message" cols="30" rows="10"></textarea>
+        <div class="field">
+          <label class="label has-text-white has-text-weight-normal is-size-5" for="message">Your Message</label>
+          <div class="control ml-5">
+            <textarea class="textarea is-primary is-large" name="message" required id="message" cols="30"
+              rows="10"></textarea>
+          </div>
         </div>
         <!-- Implement functionality for button -->
-        <button type="submit" class="button button--send">Send</button>
-        <button type="reset" class="button button--send">Clear</button>
+        <div class="container has-text-right">
+          <button type="submit" class="button has-text-centered mx-2 my-2">
+            Send
+          </button>
+          <button type="reset" class="button has-text-centered mx-2 my-2">
+            Clear
+          </button>
+        </div>
       </form>
     </section>
-    <aside class="contact__aside">
-      <ul class="contact__aside-ul">
+    <aside class="column is-1 columns has-text-centered is-vcentered mb-6">
+      <ul>
         <!-- PHONE -->
-        <li>
+        <li class="my-4">
           <a href="tel:+251929115104">
             <img src="images/phone_icon.png" alt="An icon of a phone" width="50" height="50">
           </a>
         </li>
         <!-- EMAIL -->
-        <li>
+        <li class="my-4">
           <a href="mailto:natms24@gmail.com">
             <img src="images/email_icon.png" alt="An icon of an open envelope" width="50" height="50">
           </a>
         </li>
         <!-- TELEGRAM -->
-        <li>
+        <li class="my-4">
           <a href="https://t.me/the1StardustCrusader" target="_blank">
             <img src="images/telegram_icon.png" alt="Telegram Logo" width="50" height="50">
           </a>
@@ -70,8 +88,10 @@
       </ul>
     </aside>
   </main>
-  <footer class="footer">
-    <p class="footer__p">Nathan Mesfin Shiferaw | 3rd Year Software Engineering Student</p>
+  <footer class="footer is-black has-background-grey-darker py-2 is-vcentered">
+    <div class="column content has-text-centered has-text-white">
+      <p>Nathan M.S | 3rd-Year SE</p>
+    </div>
   </footer>
 </body>
 

@@ -7,99 +7,134 @@
   <meta name="author" content="Nathan Mesfin">
   <meta name="description" content="Web Portfolio">
   <link rel="icon" href="images/pageicon_code-1.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <title>CV</title>
 </head>
 
-<body>
-  <header class="header">
-    <a href="index.html">
-      <picture class="header__picture">
-        <img src="images/man.png" alt="Person Icon" width="100" height="100">
-      </picture>
-    </a>
-    <nav class="header__nav">
-      <ul>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="places.html">Places</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+<body class="has-background-black has-shadow">
+  <header class="navbar is-black py-1">
+    <div class="navbar-brand">
+      <a href="index.html"><img src="images/man.png" class="image" alt="Person Icon" width="48" height="48"></a>
+      <a class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <nav class="navbar-menu mt-1">
+      <div class="navbar-end">
+        <div><a href="projects.html" class="navbar-item has-text-primary">Projects</a></div>
+        <div><a href="places.html" class="navbar-item has-text-primary">Places</a></div>
+        <div><a href="contact.html" class="navbar-item has-text-primary">Contact</a></div>
+      </div>
     </nav>
   </header>
-  <main>
-    <h1 class="cv__h1">Curriculum Vitae</h1>
+  <main class="has-background-black container columns is-variable is-multiline mx-auto mt-2 has-text-white px-6">
+    <h1 class="column is-12 has-text-white title has-text-centered pt-1 is-size-1 has-text-weight-normal">Curriculum
+      Vitae</h1>
     <!-- EDUCATION -->
-    <section class="education">
-      <h2 class="cv__h2">Education</h2>
-      <article class="education__card">
-        <picture class="education__card-picture">
-          <img src="images/eps_logo.jpg" alt="Ethio-Parents' School Logo" width="150" height="150">
-        </picture>
-        <h3 class="education__card-h3">Ethio-Parents' School</h3>
-        <p class="education__card-p">High School, 2017/18 - 2020/21</p>
-      </article>
-      <article class="education__card">
-        <picture class="education__card-picture">
-          <img src="images/aau_logo.jpg" alt="Addis Ababa University Logo" width="150" height="150">
-        </picture>
-        <h3 class="education__card-h3">Addis Ababa University</h3>
-        <p class="education__card-p">Software Engineering Major, 2020/21 - 2025/26</p>
-      </article>
+    <section class="section py-1 container column is-12 columns is-variable is-multiline">
+      <h2 class="column is-12 is-size-3 has-text-primary has-text-centered">Education</h2>
+      <div class="columns mx-auto mt-2 column is-10-mobile is-centered">
+        <article class="card has-background-grey-darker has-text-white-ter mx-5 mb-4">
+          <picture class="card-image has-text-centered px-3 pt-3 pb-0">
+            <img src="images/eps_logo.jpg" alt="Ethio-Parents' School Logo" width="300" height="300">
+          </picture>
+          <div class="card-content has-text-centered pt-0">
+            <h3 class="is-size-4">Ethio-Parents' School</h3>
+            <p>High School, 2017/18 - 2020/21</p>
+          </div>
+        </article>
+        <article class="card has-background-grey-darker has-text-white-ter mx-5 mb-4">
+          <picture class="card-image has-text-centered px-3 pt-3 pb-0">
+            <img src="images/aau_logo.jpg" alt="Addis Ababa University Logo" width="300" height="300">
+          </picture>
+          <div class="card-content has-text-centered pt-0">
+            <h3 class="is-size-4">Addis Ababa University</h3>
+            <p>Software Engineering Major</p>
+            <p>2020/21 - 2025/26</p>
+          </div>
+        </article>
+      </div>
     </section>
     <!-- ACCOMPLISHMENTS -->
-    <section class="accomplishments">
-      <h2 class="cv__h2">Accomplishments</h2>
-      <article class="accomplishments__card">
-        <picture class="accomplishments__card-picture">
-          <img src="images/eps_logo.jpg" alt="Ethio-Parents' School Logo" width="100" height="100">
-        </picture>
-        <h3 class="accomplishments__card-h3">Certificate of Academic Excellence</h3>
-      </article>
-      <article class="accomplishments__card">
-        <picture class="accomplishments__card-picture">
-          <img src="images/goethe_logo.png" alt="Goethe Institute Logo" width="100" height="100">
-        </picture>
-        <h3 class="accomplishments__card-h3">German A1.1 Certificate</h3>
-      </article>
+    <section class="section py-1 container column is-12 columns is-variable is-multiline">
+      <h2 class="column is-12 is-size-3 has-text-primary has-text-centered">Accomplishments</h2>
+      <div class="columns mx-auto mt-2 column is-10-mobile is-centered">
+        <article class="card has-background-grey-darker has-text-white-ter mx-5 mb-4">
+          <picture class="card-image has-text-centered px-3 pt-3 pb-0">
+            <img src="images/eps_logo.jpg" alt="Ethio-Parents' School Logo" width="300" height="300">
+          </picture>
+          <div class="card-content has-text-centered pt-0">
+            <h3 class="is-size-5">Certificate of Academic <br>Excellence</h3>
+          </div>
+        </article>
+        <article class="card has-background-grey-darker has-text-white-ter mx-5 mb-4">
+          <picture class="card-image has-text-centered px-3 pt-3 pb-0">
+            <img src="images/goethe_logo.png" alt="Goethe Institute Logo" width="300" height="300">
+          </picture>
+          <div class="card-content has-text-centered pt-0">
+            <h3 class="is-size-5">German A1.1 Certificate</h3>
+          </div>
+        </article>
+      </div>
     </section>
     <!-- SKILLS -->
-    <section class="skills">
-      <h2 class="cv__h2">Skills</h2>
-      <article class="skills__article">
-        <div class="skills__article-div">
-          <picture>
+    <section class="section py-1 container column is-12 columns is-variable is-multiline">
+      <h2 class="column is-12 is-size-3 has-text-primary has-text-centered">Skills</h2>
+      <article class="columns my-3 px-5 is-variable is-multiline mx-auto">
+        <div
+          class="card column is-5 columns is-vcentered has-background-grey-darker py-3 has-text-centered has-text-white-ter mx-auto my-3 is-6-mobile">
+          <picture class="card-image">
             <img src="images/aau_logo.jpg" alt="Addis Ababa University Logo" width="100" height="100">
           </picture>
-          <h3>Computer Programming with Python</h3>
+          <div class="card-content mx-auto">
+            <h3>Computer Programming with <br> Python</h3>
+          </div>
         </div>
-        <div class="skills__article-div">
-          <picture>
+        <div
+          class="card column is-5 columns is-vcentered has-background-grey-darker py-3 has-text-centered has-text-white-ter mx-auto my-3 is-6-mobile">
+          <picture class="card-image">
             <img src="images/aau_logo.jpg" alt="Addis Ababa University Logo" width="100" height="100">
           </picture>
-          <h3>Object-Oriented Programming &amp; Java</h3>
+          <div class="card-content mx-auto">
+            <h3>Object-Oriented Programming <br> &amp; Java</h3>
+          </div>
         </div>
-        <div class="skills__article-div">
-          <picture>
+        <div
+          class="card column is-5 columns is-vcentered has-background-grey-darker py-3 has-text-centered has-text-white-ter mx-auto my-3 is-6-mobile">
+          <picture class="card-image">
             <img src="images/aau_logo.jpg" alt="Addis Ababa University Logo" width="100" height="100">
           </picture>
-          <h3>Relational Databases &amp; SQL</h3>
+          <div class="card-content mx-auto">
+            <h3>Relational Databases &amp; SQL</h3>
+          </div>
         </div>
-        <div class="skills__article-div">
-          <picture>
+        <div
+          class="card column is-5 columns is-vcentered has-background-grey-darker py-3 has-text-centered has-text-white-ter mx-auto my-3 is-6-mobile">
+          <picture class="card-image">
             <img src="images/fcc_logo.webp" alt="Free Code Camp Logo" width="100" height="100">
           </picture>
-          <h3>JavaScript</h3>
+          <div class="card-content mx-auto">
+            <h3>JavaScript</h3>
+          </div>
         </div>
-        <div class="skills__article-div">
-          <picture>
+        <div
+          class="card column is-5 columns is-vcentered has-background-grey-darker py-3 has-text-centered has-text-white-ter mx-auto my-3 is-6-mobile">
+          <picture class="card-image">
             <img src="images/goethe_logo.png" alt="Goethe Institute Logo" width="100" height="100">
           </picture>
-          <h3>German; Level A1.1</h3>
+          <div class="card-content mx-auto">
+            <h3>German; Level A1.1</h3>
+          </div>
         </div>
       </article>
     </section>
   </main>
-  <footer class="footer">
-    <p class="footer_p">Nathan Mesfin Shiferaw | 3rd Year Software Engineering Student</p>
+  <footer class="footer is-black has-background-grey-darker py-2 is-vcentered">
+    <div class="column content has-text-centered has-text-white">
+      <p>Nathan M.S | 3rd-Year SE</p>
+    </div>
   </footer>
 </body>
 

@@ -7,67 +7,80 @@
   <meta name="author" content="Nathan Mesfin">
   <meta name="description" content="Web Portfolio">
   <link rel="icon" href="images/pageicon_code-1.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <title>Projects</title>
 </head>
 
-<body>
-  <header class="header">
-    <a href="index.html">
-      <picture class="header__picture">
-        <img src="images/man.png" alt="Person Icon" width="100" height="100">
-      </picture>
-    </a>
-    <nav class="header__nav">
-      <ul>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="places.html">Places</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+<body class="has-background-black has-shadow">
+  <header class="navbar is-black py-1">
+    <div class="navbar-brand">
+      <a href="index.html"><img src="images/man.png" class="image" alt="Person Icon" width="48" height="48"></a>
+      <a class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <nav class="navbar-menu mt-1">
+      <div class="navbar-end">
+        <div><a href="cv.html" class="navbar-item has-text-primary">CV</a></div>
+        <div><a href="places.html" class="navbar-item has-text-primary">Places</a></div>
+        <div><a href="contact.html" class="navbar-item has-text-primary">Contact</a></div>
+      </div>
     </nav>
   </header>
-  <main>
+  <main class="has-background-black container columns is-variable is-multiline mx-auto mt-2">
     <!-- OPAL -->
-    <article class="projects__article">
-      <h3 class="projects__article-h3">A Database System for a Hospital</h3>
-      <picture>
-        <img src="images/mysql_logo.png" alt="MySQL logo" width="300" height="300">
-      </picture>
-      <aside>
-        <p class="projects__article-p">
-          A comprehensive database system for an imaginary hospital. Accomodates employee and patient data along with
-          available facilities and rooms in the hospital.
-        </p>
-      </aside>
+    <h1 class="has-text-white has-text-centered pt-1 is-size-1 has-text-weight-normal column is-12">Projects</h1>
+    <article class="column is-6-tablet has-text-centered">
+      <h3 class="has-text-white is-size-4">A Database System for a Hospital</h3>
+      <div class="mt-1 columns is-vcentered">
+        <picture class="column is-6">
+          <img src="images/mysql_logo.png" alt="MySQL logo" width="300" height="300">
+        </picture>
+        <aside class="column is-6">
+          <p class="has-text-white">
+            A comprehensive database system for an imaginary hospital. Accomodates employee and patient data along with
+            available facilities and rooms in the hospital.
+          </p>
+        </aside>
+      </div>
     </article>
     <!-- FLAPPY BIRD -->
-    <article class="projects__article">
-      <h3 class="projects__article-h3">Web-based Flappy Bird</h3>
-      <picture>
-        <img src="images/flappy.png" alt="Flappy Bird Image" width="325" height="260">
-      </picture>
-      <aside>
-        <p class="projects__article-p">
-          A light web-based implementation of the popular game Flappy Bird with local score saves.
-        </p>
-      </aside>
+    <article class="column is-6-tablet has-text-centered">
+      <h3 class="has-text-white is-size-4">Web-based Flappy Bird</h3>
+      <div class="mt-1 columns is-vcentered mt-3">
+        <picture class="column is-6">
+          <img src="images/flappy.png" alt="Flappy Bird Image" width="325" height="260">
+        </picture>
+        <aside class="column is-6">
+          <p class="has-text-white">
+            A light web-based implementation of the popular game Flappy Bird with local score saves.
+          </p>
+        </aside>
+      </div>
     </article>
     <!-- CARDIO CARE -->
-    <article class="projects__article">
-      <h3 class="projects__article-h3">Cardio Care</h3>
-      <picture>
-        <img src="images/med_logo.png" alt="Medical Facility - Standard Icon" width="300" height="300">
-      </picture>
-      <aside>
-        <p class="projects__article-p">
-          A comprehensive web-based service that facilitates communciation between customers and their doctors while
-          placing medical data closer to patients' hands.
-        </p>
-      </aside>
+    <article class="column is-6-tablet mx-auto has-text-centered">
+      <h3 class="has-text-white is-size-4">Cardio Care</h3>
+      <div class="mt-1 columns is-vcentered">
+        <picture class="column is-6">
+          <img src="images/med_logo.png" alt="Medical Facility - Standard Icon" width="300" height="300">
+        </picture>
+        <aside class="column is-6">
+          <p class="has-text-white">
+            A comprehensive web-based service that facilitates communciation between customers and their doctors while
+            placing medical data closer to patients' hands.
+          </p>
+        </aside>
+      </div>
     </article>
-    <p class="projects__p--final">Perhaps there's more to come...</p>
+    <p class="column is-12 has-text-centered has-text-white is-size-5 mt-2">Perhaps there's more to come...</p>
   </main>
-  <footer class="footer">
-    <p class="footer_p">Nathan Mesfin Shiferaw | 3rd Year Software Engineering Student</p>
+  <footer class="footer is-black has-background-grey-darker py-2 is-vcentered">
+    <div class="column content has-text-centered has-text-white">
+      <p>Nathan M.S | 3rd-Year SE</p>
+    </div>
   </footer>
 </body>
 
