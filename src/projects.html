@@ -15,13 +15,13 @@
   <header class="navbar is-black py-1">
     <div class="navbar-brand">
       <a href="index.html"><img src="images/man.png" class="image" alt="Person Icon" width="48" height="48"></a>
-      <a class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <a class="navbar-burger" aria-label="menu" aria-expanded="false" id="nav-button">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
-    <nav class="navbar-menu mt-1">
+    <nav class="navbar-menu mt-1" id="nav-link">
       <div class="navbar-end">
         <div><a href="cv.html" class="navbar-item has-text-primary">CV</a></div>
         <div><a href="places.html" class="navbar-item has-text-primary">Places</a></div>
@@ -29,10 +29,10 @@
       </div>
     </nav>
   </header>
-  <main class="has-background-black container columns is-variable is-multiline mx-auto mt-2">
+  <main class="has-background-black container columns is-variable is-multiline mx-auto mt-3">
     <!-- OPAL -->
     <h1 class="has-text-white has-text-centered pt-1 is-size-1 has-text-weight-normal column is-12">Projects</h1>
-    <article class="column is-6-tablet has-text-centered">
+    <article class="column is-6-tablet has-text-centered my-2">
       <h3 class="has-text-white is-size-4">A Database System for a Hospital</h3>
       <div class="mt-1 columns is-vcentered">
         <picture class="column is-6">
@@ -47,7 +47,7 @@
       </div>
     </article>
     <!-- FLAPPY BIRD -->
-    <article class="column is-6-tablet has-text-centered">
+    <article class="column is-6-tablet has-text-centered my-2">
       <h3 class="has-text-white is-size-4">Web-based Flappy Bird</h3>
       <div class="mt-1 columns is-vcentered mt-3">
         <picture class="column is-6">
@@ -61,7 +61,7 @@
       </div>
     </article>
     <!-- CARDIO CARE -->
-    <article class="column is-6-tablet mx-auto has-text-centered">
+    <article class="column is-6-tablet mx-auto has-text-centered my-2">
       <h3 class="has-text-white is-size-4">Cardio Care</h3>
       <div class="mt-1 columns is-vcentered">
         <picture class="column is-6">
@@ -75,13 +75,14 @@
         </aside>
       </div>
     </article>
-    <p class="column is-12 has-text-centered has-text-white is-size-5 mt-2">Perhaps there's more to come...</p>
+    <p class="column is-12 has-text-centered has-text-white is-size-5 mt-5">Perhaps there's more to come...</p>
   </main>
   <footer class="footer is-black has-background-grey-darker py-2 is-vcentered">
     <div class="column content has-text-centered has-text-white">
       <p>Nathan M.S | 3rd-Year SE</p>
     </div>
   </footer>
+  <script src="js/navbar.js"></script>
 </body>
 
 </html>
