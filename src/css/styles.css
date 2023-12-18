@@ -297,7 +297,7 @@ body {
 main {
     display: grid;
     width: 98vw;
-    margin: min(1rem, 1vh) auto 0 auto;
+    margin: min(5rem, 1vh) auto 0 auto;
 }
 
 .cv,
@@ -340,7 +340,7 @@ h1 {
 .places__h2 {
     text-align: center;
     font-size: 2rem;
-    margin-top: min(0.5rem, 1.5vh);
+    margin-top: min(2rem, 1.5vh);
     color: var(--FONT-COLOR);
     font-weight: normal;
 }
@@ -415,7 +415,8 @@ h1 {
 }
 
 .books__container-figure {
-    margin-bottom: min(0.2rem, 3vh);
+    margin-bottom: min(1rem, 3vh);
+    position: relative;
 }
 
 .books__container-figure-img {
@@ -423,13 +424,53 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     width: min(80vw, 306.7px);
-    height: auto;
+    height: min(116vw, 447px);
     border: 3px rgb(23, 0, 23) solid;
+    z-index: 1;
+}
+
+.books__description {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    width: min(80vw, 306.7px);
+    height: min(116vw, 447px);
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.books__description-p {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5%;
+    font-size: 1.2rem;
+}
+
+
+.fadeInAnim {
+    animation-name: fadeInA;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 1;
 }
 
 .books__container-figure-figcaption {
     text-align: center;
     font-size: 1.3rem;
+}
+
+@keyframes fadeInA {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opactity: 1;
+    }
 }
 
 /* home music */
@@ -786,6 +827,10 @@ h1 {
         grid-template-rows: 15vh 1fr 12vh;
     }
 
+    main {
+        margin-top: 1rem;
+    }
+
     h1 {
         font-size: 3.5rem;
     }
@@ -1005,6 +1050,7 @@ h1 {
 
     .places__h2 {
         font-size: 3.5rem;
+        margin-top: 1.5rem;
     }
 
     .places__article {
@@ -1180,7 +1226,8 @@ h1 {
         margin: 0 auto 2.5rem auto;
     }
 
-    .books__container-figure-img {
+    .books__container-figure-img,
+    .books__description {
         width: 35vw;
         height: 51vw;
     }
@@ -1341,6 +1388,7 @@ h1 {
 
     .places__h2 {
         font-size: 3.5rem;
+        margin-top: min(5rem, 7.5vh);
     }
 
     .places__article {
@@ -1368,7 +1416,7 @@ h1 {
     .places__article-aside {
         width: 42.5vw;
         margin-top: 0.5rem;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .places__article-aside-ul {
@@ -1471,7 +1519,7 @@ h1 {
 
     /* body and headers */
     body {
-        grid-template-rows: 10vh 1fr 8vh;
+        grid-template-rows: min(10vh, 110px) 1fr min(8vh, 88px);
     }
 
     h1 {
@@ -1479,13 +1527,13 @@ h1 {
     }
 
     .header {
-        height: 10vh;
+        height: min(10vh, 110px);
     }
 
     .header__picture-img {
-        width: 8.5vh;
-        height: 8.5vh;
-        margin: 0.5vh 0.5rem;
+        width: min(8.5vh, 93.5px);
+        height: min(8.5vh, 93.5px);
+        margin: min(0.5vh, 5.5px) 0.5rem;
     }
 
     .header__nav-ul {
@@ -1558,7 +1606,8 @@ h1 {
         margin: 0 auto 2.5rem auto;
     }
 
-    .books__container-figure-img {
+    .books__container-figure-img,
+    .books__description {
         width: min(33vw, 400px);
         height: min(47vw, 600px);
     }
@@ -1772,7 +1821,14 @@ h1 {
         width: 33vw;
         margin-top: 2.5%;
         margin-left: 5%;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
+        position: relative;
+    }
+
+    .places__article-div {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .places__article-aside-ul {
@@ -1878,7 +1934,7 @@ h1 {
 
     .footer {
         font-size: 1.2rem;
-        height: 8vh;
+        height: min(8vh, 88px);
     }
 
     /* Full HP Monitors and Large Screens */
