@@ -6,34 +6,46 @@ const button = document.querySelector('.header__button');
 const body = document.querySelector('body');
 let buttonActive = false;
 const defaultLayout = "grid-template-rows: min(6rem, 12vh) 1fr min(4rem, 8vh);";
-let bodyGridLayout = "grid-template-rows: min(6rem, 12vh) max(6rem, min(15vh, 135px)) 1fr min(4rem, 8vh);"
-
+let bodyGridLayout = "grid-template-rows: min(6rem, 12vh) max(6rem, min(15vh, 135px)) 1fr min(4rem, 8vh);";
+let mainAnimationName = "main--animation";
 if (document.title === "Home") {
-    bodyGridLayout = "grid-template-rows: min(6rem, 12vh) max(8rem, min(20vh, 180px)) 1fr min(4rem, 8vh);"
+    bodyGridLayout = "grid-template-rows: min(6rem, 12vh) max(8rem, min(20vh, 180px)) 1fr min(4rem, 8vh);";
+    mainAnimationName = "main--animation-home";
 }
 
 // event handler for the nav button
 function clickHandler() {
     if (!buttonActive) {
         navMobile.hidden = false;
-        body.setAttribute('style', bodyGridLayout);
+        navMobile.classList.add('body__mobile--animation');
+        setTimeout(() => {
+            navMobile.setAttribute('style', 'z-index: 1;');
+        }, 500);
+        body.classList.add(mainAnimationName);
+        // body.setAttribute('style', bodyGridLayout);
         buttonActive = true;
     } else {
         navMobile.hidden = true;
-        body.setAttribute('style', defaultLayout);
+        navMobile.classList.remove('body__mobile--animation');
+        navMobile.setAttribute('style', 'z-index: -1;');
+        body.classList.remove(mainAnimationName);
+        // body.setAttribute('style', defaultLayout);
         buttonActive = false;
     }
 }
 
 // resets the navbar settings
 function resetNavbar() {
-    if (window.innerWidth < 450) {
+    if (window.innerWidth < 600) {
         nav.hidden = true;
         button.hidden = false;
     } else {
         nav.hidden = false;
         button.hidden = true;
     }
+    navMobile.setAttribute('style', 'z-index: -1;');
+    body.classList.remove(mainAnimationName);
+    body.setAttribute('style', defaultLayout);
     navMobile.hidden = true;
     buttonActive = false;
     body.setAttribute('style', defaultLayout);
