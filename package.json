@@ -1,0 +1,14 @@
+{
+  "name": "ugr-0534-14",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/css/src.css -o ./src/css/public.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
