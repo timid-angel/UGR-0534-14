@@ -13,8 +13,9 @@ module.exports = {
         ]
       },
       colors: {
-        bgcolor: "#2d2d2d",
-        footerbg: "#333"
+        bgcolor: "#151517",
+        footerbg: "#212121",
+        fontPrimary: "rgb(204, 204, 204)"
       }
     },
   },

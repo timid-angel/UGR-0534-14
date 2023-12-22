@@ -6,69 +6,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Nathan Mesfin">
   <meta name="description" content="Web Portfolio">
+  <link rel="stylesheet" href="css/public.css">
   <link rel="icon" href="images/pageicon_code-1.png">
   <title>Projects</title>
 </head>
 
-<body>
-  <header class="header">
-    <a href="index.html">
-      <picture class="header__picture">
-        <img src="images/man.png" alt="Person Icon" width="100" height="100">
+<body class="font-lato bg-bgcolor text-fontPrimary min-h-screen flex flex-col justify-between">
+  <header class="flex justify-between h-16 bg-bgcolor border-b-2 border-gray-600">
+    <a href="index.html" class="flex items-center ml-2">
+      <picture class="flex items-center h-16">
+        <img src="images/man.png" alt="Person Icon" width="100" height="100"
+          class="h-5/6 w-auto border-cyan-400 border-2 rounded-full p-0 transition ease-out duration-500 transform hover:scale-110">
       </picture>
     </a>
-    <nav class="header__nav">
-      <ul>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="places.html">Places</a></li>
-        <li><a href="contact.html">Contact</a></li>
+    <nav class="hidden items-center mr-3 md:flex">
+      <ul class="text-cyan-500 flex text-lg items-center h-full">
+        <li class="h-4/6 rounded-sm flex items-center hover:bg-slate-100"><a class="px-2" href="cv.html">CV</a>
+        </li>
+        <li class="h-4/6 rounded-sm flex items-center hover:bg-slate-100"><a class="px-2" href="places.html">Places</a>
+        </li>
+        <li class="h-4/6 rounded-sm flex items-center hover:bg-slate-100"><a class="px-2"
+            href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="flex items-center justify-center md:hidden" id="navbutton">
+      <img src="images/icons8-menu.svg" alt="A Menu Icon" class="w-4/6 cursor-pointer">
+    </div>
   </header>
-  <main>
+  <nav class="hidden items-center md:hidden bg-slate-800 border-b-2 border-gray-600" id="menu">
+    <ul class="flex text-lg flex-col items-center text-cyan-500 bg-slate-800">
+      <li
+        class="w-full h-9 flex justify-center items-center transition-colors ease-out duration-200 hover:bg-gray-900 active:bg-gray-900 cursor-pointer">
+        <a href="cv.html">CV</a>
+      </li>
+      <li
+        class="w-full h-9 flex justify-center items-center transition-colors ease-linear duration-200 hover:bg-gray-900 active:bg-gray-900 cursor-pointer">
+        <a href="places.html">Places</a>
+      </li>
+      <li
+        class="w-full h-9 flex justify-center items-center transition-colors ease-out duration-200 hover:bg-gray-900 active:bg-gray-900 cursor-pointer">
+        <a href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <main class="bg-bgcolor flex flex-row flex-wrap items-center max-w-screen-xl mx-auto">
+    <h1 class="text-4xl my-3 w-full text-center">Projects</h1>
     <!-- OPAL -->
-    <article class="projects__article">
-      <h3 class="projects__article-h3">A Database System for a Hospital</h3>
-      <picture>
-        <img src="images/mysql_logo.png" alt="MySQL logo" width="300" height="300">
-      </picture>
-      <aside>
-        <p class="projects__article-p">
-          A comprehensive database system for an imaginary hospital. Accomodates employee and patient data along with
-          available facilities and rooms in the hospital.
-        </p>
-      </aside>
-    </article>
+    <div class="w-11/12 mb-8 sm:mb-1 sm:mt-2 lg:w-5/12 sm:h-72 mx-auto">
+      <article class="flex flex-col mt-4 sm:flex-row sm:flex-wrap">
+        <h3 class="w-full text-2xl text-cyan-500 text-center">A Database System for a Hospital</h3>
+        <picture class="w-full py-4 sm:w-2/5 sm:py-0">
+          <img src="images/mysql_logo.png" alt="MySQL logo" width="300" height="300" class="mx-auto">
+        </picture>
+        <aside class="w-full sm:w-3/5 flex items-center">
+          <p class="text-center text-lg font-light pl-4 mr-2">
+            A comprehensive database system for an imaginary hospital. Accomodates employee and patient data along with
+            available facilities and rooms in the hospital.
+          </p>
+        </aside>
+      </article>
+    </div>
     <!-- FLAPPY BIRD -->
-    <article class="projects__article">
-      <h3 class="projects__article-h3">Web-based Flappy Bird</h3>
-      <picture>
-        <img src="images/flappy.png" alt="Flappy Bird Image" width="325" height="260">
-      </picture>
-      <aside>
-        <p class="projects__article-p">
-          A light web-based implementation of the popular game Flappy Bird with local score saves.
-        </p>
-      </aside>
-    </article>
+    <div class="w-11/12 mb-8 sm:mb-1 sm:mt-2 lg:w-5/12 sm:h-72 mx-auto border-gray-600">
+      <article class="flex flex-col mt-4 sm:flex-row sm:flex-wrap">
+        <h3 class="w-full text-2xl text-cyan-500 text-center sm:mb-4">Web-based Flappy Bird</h3>
+        <picture class="w-full py-4 sm:w-2/5 sm:py-0">
+          <img src="images/flappy.png" alt="Flappy Bird Image" width="325" height="260" class="mx-auto">
+        </picture>
+        <aside class="w-full sm:w-3/5 flex items-center">
+          <p class="text-center text-lg font-light px-4">
+            A light web-based implementation of the popular game Flappy Bird with local score saves.
+          </p>
+        </aside>
+      </article>
+    </div>
     <!-- CARDIO CARE -->
-    <article class="projects__article">
-      <h3 class="projects__article-h3">Cardio Care</h3>
-      <picture>
-        <img src="images/med_logo.png" alt="Medical Facility - Standard Icon" width="300" height="300">
-      </picture>
-      <aside>
-        <p class="projects__article-p">
-          A comprehensive web-based service that facilitates communciation between customers and their doctors while
-          placing medical data closer to patients' hands.
-        </p>
-      </aside>
-    </article>
-    <p class="projects__p--final">Perhaps there's more to come...</p>
+    <div class="w-11/12 mb-4 lg:w-1/2 mx-auto">
+      <article class="flex flex-col mt-4 sm:flex-row sm:flex-wrap">
+        <h3 class="w-full text-2xl text-cyan-500 text-center">Cardio Care</h3>
+        <picture class="w-full py-4 sm:w-2/5 sm:py-0">
+          <img src="images/med_logo.png" alt="Medical Facility - Standard Icon" width="300" height="300"
+            class="mx-auto">
+        </picture>
+        <aside class="w-full sm:w-3/5 flex items-center">
+          <p class="text-center text-lg font-light px-4">
+            A comprehensive web-based service that facilitates communciation between customers and their doctors while
+            placing medical data closer to patients' hands.
+          </p>
+        </aside>
+      </article>
+    </div>
+    <p class="w-full text-xl text-center pt-4 my-6 border-t-2 border-slate-400">Perhaps there's more to come...</p>
   </main>
-  <footer class="footer">
-    <p class="footer_p">Nathan Mesfin Shiferaw | 3rd Year Software Engineering Student</p>
+  <footer class="h-10 flex justify-center items-center bg-footerbg">
+    <p class="">Nathan M.S. | 3rd-Year SE</p>
   </footer>
+  <script src="js/nav.js"></script>
 </body>
 
 </html>

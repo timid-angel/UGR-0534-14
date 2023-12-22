@@ -11,8 +11,8 @@
   <title>Home</title>
 </head>
 
-<body class="font-lato">
-  <header class="flex justify-between h-16 bg-gray-900 border-b-2 border-gray-500">
+<body class="font-lato bg-bgcolor text-fontPrimary">
+  <header class="flex justify-between h-16 bg-bgcolor border-b-2 border-gray-600">
     <picture class="flex items-center ml-2">
       <img src="images/man.png" alt="Person Icon" width="100" height="100"
         class="h-5/6 w-auto border-cyan-400 border-2 rounded-full p-0 transition ease-out duration-500 transform hover:scale-110">
@@ -32,100 +32,111 @@
       <img src="images/icons8-menu.svg" alt="A Menu Icon" class="w-4/6 cursor-pointer">
     </div>
   </header>
-  <nav class="hidden items-center md:hidden bg-gray-700 border-b-2 border-gray-500" id="menu">
-    <ul class="flex text-lg flex-col items-center text-cyan-500 bg-gray-700">
+  <nav class="hidden items-center md:hidden bg-slate-800 border-b-2 border-gray-600" id="menu">
+    <ul class="flex text-lg flex-col items-center text-cyan-500 bg-slate-800">
       <li
-        class="w-full h-9 flex justify-center items-center transition-colors ease-out duration-200 hover:bg-gray-800 active:bg-gray-800 cursor-pointer">
+        class="w-full h-9 flex justify-center items-center transition-colors ease-out duration-200 hover:bg-gray-900 active:bg-gray-900 cursor-pointer">
         <a href="cv.html">CV</a>
       </li>
       <li
-        class="w-full h-9 flex justify-center items-center transition-colors ease-linear duration-200 hover:bg-gray-800 active:bg-gray-800 cursor-pointer">
+        class="w-full h-9 flex justify-center items-center transition-colors ease-linear duration-200 hover:bg-gray-900 active:bg-gray-900 cursor-pointer">
         <a href="projects.html">Projects</a>
       </li>
       <li
-        class="w-full h-9 flex justify-center items-center transition-colors ease-out duration-200 hover:bg-gray-800 active:bg-gray-800 cursor-pointer">
+        class="w-full h-9 flex justify-center items-center transition-colors ease-out duration-200 hover:bg-gray-900 active:bg-gray-900 cursor-pointer">
         <a href="places.html">Places</a>
       </li>
       <li
-        class="w-full h-9 flex justify-center items-center transition-colors ease-out duration-200 hover:bg-gray-800 active:bg-gray-800 cursor-pointer">
+        class="w-full h-9 flex justify-center items-center transition-colors ease-out duration-200 hover:bg-gray-900 active:bg-gray-900 cursor-pointer">
         <a href="contact.html">Contact</a>
       </li>
     </ul>
   </nav>
-  <main class="bg-gray-900">
+  <main class="bg-bgcolor flex flex-col items-center max-w-screen-xl mx-auto">
     <!-- INTRODUCTION -->
-    <h1 class="home__h1">Greetings!</h1>
-    <article class="home__article">
-      <h2 class="home__article-h2">About Me</h2>
-      <p class="home__article-p">
-        My name is Nathan Mesfin. I am a third-year Software Engineering
-        student at Addis Ababa University. Visit my
-        <a href="cv.html">Curriculum Vitae</a> page for better insight into my
-        professional life.
-      </p>
-      <picture class="home__article-picture">
-        <img src="images/browser.png" alt="Profile Illustration" width="400" height="400">
+    <h1 class="text-5xl mt-3">Greetings!</h1>
+    <article class="flex flex-wrap flex-col sm:flex-row items-center mx-4 md:mx-10 py-4 mt-2 sm:mt-0 sm:py-8">
+      <div class="mb-4 sm:mb-0 w-full sm:w-2/3 px-5 flex justify-center flex-col">
+        <h2 class="w-full text-center text-2xl">About Me</h2>
+        <p class="text-center mt-2 text-lg font-light">
+          My name is Nathan Mesfin. I am a third-year Software Engineering
+          student at Addis Ababa University. Visit my
+          <a href="cv.html" class="text-cyan-500">Curriculum Vitae</a> page for better insight into my
+          professional life.
+        </p>
+      </div>
+      <picture class="w-2/3 sm:w-1/3 sm:pl-10">
+        <img src="images/browser.png" alt="Profile Illustration" width="400" height="400" class="w-48 mx-auto">
       </picture>
     </article>
     <!-- INTRESTS -->
-    <article class="home__article">
-      <h2 class="home__article-h2">My Interests</h2>
-      <p class="home__article-p">
-        When I'm not focusing on my studies, I find myself reading mystery
-        books, listening to music and learning the German language.
-        <em>Einen schönen Tag!</em>
-      </p>
-      <picture class="home__article-picture">
-        <img src="images/hobby.png" alt="Pictures of hobbies" width="400" height="400">
+    <article class="flex flex-wrap flex-col-reverse sm:flex-row items-center mx-4 md:mx-10 py-4 mt-2 sm:mt-0 sm:py-8">
+      <picture class="w-2/3 sm:w-1/3 sm:pl-10">
+        <img src="images/hobby.png" alt="Pictures of hobbies" width="400" height="400" class="w-52 mx-auto">
       </picture>
+      <div class="mb-4 sm:mb-0 w-full sm:w-2/3 px-5 flex justify-center flex-col">
+        <h2 class="w-full text-center text-2xl">My Interests</h2>
+        <p class="text-center mt-2 text-lg font-light">
+          When I'm not focusing on my studies, I find myself reading mystery
+          books, listening to music and learning the German language.
+          <em>Einen schönen Tag!</em>
+        </p>
+      </div>
     </article>
     <!-- BOOKS -->
-    <article class="home__article--books">
-      <h2 class="home__article-h2--books">My Favorite Reads</h2>
-      <figure class="home__article-figure--books">
-        <img src="images/books_LOTR.jpg" alt="LOTR Book Cover" width="360" height="540">
-        <figcaption>The Lord of the Rings Triology</figcaption>
+    <article class="flex flex-wrap mx-4 md:mx-10 py-2 md:py-8 max-w-screen-lg mt-5 md:mt-0">
+      <h2 class="w-full text-center text-cyan-500 text-2xl lg:text-3xl">My Favorite Reads</h2>
+      <figure class="w-full md:w-1/2 mt-5 lg:mt-10 p-0 md:p-4 lg-0">
+        <img src="images/books_LOTR.jpg" alt="LOTR Book Cover" width="360" height="540"
+          class="mx-auto border-2 border-indigo-950 p-1">
+        <figcaption class="text-center text-xl">The Lord of the Rings Triology</figcaption>
       </figure>
-      <figure class="home__article-figure--books">
-        <img src="images/books_ATTWN.avif" alt="And Then There Were None Book Cover" width="360" height="540">
-        <figcaption>And Then There Were None</figcaption>
+      <figure class="w-full md:w-1/2 mt-5 lg:mt-10 p-0 md:p-4 lg-0">
+        <img src="images/books_ATTWN.avif" alt="And Then There Were None Book Cover" width="360" height="540"
+          class="mx-auto border-2 border-indigo-950 p-1">
+        <figcaption class="text-center text-xl">And Then There Were None</figcaption>
       </figure>
-      <figure class="home__article-figure--books">
-        <img src="images/books_BOE.webp" alt="Blood of Elves Book Cover" width="360" height="540">
-        <figcaption>Blood of Elves</figcaption>
+      <figure class="w-full md:w-1/2 mt-5 lg:mt-10 p-0 md:p-4 lg-0">
+        <img src="images/books_BOE.webp" alt="Blood of Elves Book Cover" width="360" height="540"
+          class="mx-auto border-2 border-indigo-950 p-1">
+        <figcaption class="text-center text-xl">Blood of Elves</figcaption>
       </figure>
-      <figure class="home__article-figure--books">
-        <img src="images/books_DOTN.jpg" alt="Death on the Nile Book Cover" width="360" height="540">
-        <figcaption>Death on the Nile</figcaption>
+      <figure class="w-full md:w-1/2 mt-5 lg:mt-10 p-0 md:p-4 lg-0">
+        <img src="images/books_DOTN.jpg" alt="Death on the Nile Book Cover" width="360" height="540"
+          class="mx-auto border-2 border-indigo-950 p-1">
+        <figcaption class="text-center text-xl">Death on the Nile</figcaption>
       </figure>
     </article>
     <!-- MUSIC -->
-    <article class="home__article--music">
-      <h2 class="home__article-h2--music">My Favorite Listens</h2>
-      <figure class="home__article-figure--music">
-        <img src="images/music_black-parade.jpg" alt="Black Parade Album Cover" width="400" height="400">
-        <figcaption>Black Parade by My Chemical Romance</figcaption>
+    <article class="flex flex-wrap justify-center mx-4 md:mx-10 py-8 max-w-screen-md mt-5 md:mt-0">
+      <h2 class="w-full text-center text-cyan-500 text-3xl mb-2">My Favorite Listens</h2>
+      <figure class="w-full sm:w-1/2 mx-auto p-4 sm:p-8">
+        <img class="p-2 border-2 border-gray-700 mx-auto max-w-72" src="images/music_black-parade.jpg"
+          alt="Black Parade Album Cover" width="400" height="400">
+        <figcaption class="text-lg text-center">Black Parade by My Chemical Romance</figcaption>
       </figure>
-      <figure class="home__article-figure--music">
-        <img src="images/music_black-country-new-road.webp" alt="Ants From Up There Album Cover" width="400"
-          height="400">
-        <figcaption>Ants From Up There by Black Country, New Road</figcaption>
+      <figure class="w-full sm:w-1/2 mx-auto p-4 sm:p-8">
+        <img class="p-2 border-2 border-gray-700 mx-auto max-w-72" src="images/music_black-country-new-road.webp"
+          alt="Ants From Up There Album Cover" width="400" height="400">
+        <figcaption class="text-lg text-center">Ants From Up There by Black Country, New Road</figcaption>
       </figure>
-      <figure class="home__article-figure--music">
-        <img src="images/music_dragon-new-moutain-i-believe-in-you.jpg"
+      <figure class="w-full sm:w-1/2 mx-auto p-4 sm:p-8">
+        <img class="p-2 border-2 border-gray-700 mx-auto max-w-72"
+          src="images/music_dragon-new-moutain-i-believe-in-you.jpg"
           alt="Dragon New Mountain I Believe In You Album Cover" width="400" height="400">
-        <figcaption>
+        <figcaption class="text-lg text-center">
           Dragon New Mountain I Believe In You by Big Thief
         </figcaption>
       </figure>
-      <figure class="home__article-figure--music">
-        <img src="images/music_the-glow.jpg" alt="The Glow Pt.2 Album Cover" width="400" height="400">
-        <figcaption>The Glow Pt.2 by The Microphones</figcaption>
+      <figure class="w-full sm:w-1/2 mx-auto p-4 sm:p-8">
+        <img class="p-2 border-2 border-gray-700 mx-auto max-w-72" src="images/music_the-glow.jpg"
+          alt="The Glow Pt.2 Album Cover" width="400" height="400">
+        <figcaption class="text-lg text-center">The Glow Pt.2 by The Microphones</figcaption>
       </figure>
     </article>
   </main>
-  <footer class="h-10 flex justify-center items-center bg-slate-500">
-    <p class="footer__p">Nathan M.S. | 3rd-Year SE</p>
+  <footer class="h-10 flex justify-center items-center bg-footerbg">
+    <p class="">Nathan M.S. | 3rd-Year SE</p>
   </footer>
   <script src="js/nav.js"></script>
 </body>
