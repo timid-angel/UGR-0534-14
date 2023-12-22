@@ -53,28 +53,40 @@
     <section class="flex flex-col mx-auto">
       <h1 class="w-full text-center text-4xl mt-3">Contact Me</h1>
       <!-- setup a proper action -->
-      <form action="https://httpbin.org/get" method="get" class="p-2">
+      <form method="get" class="p-2" id="contact__form">
         <div class="flex flex-wrap mb-2">
           <label for="name" class="w-full my-3 text-xl">Name</label>
-          <input type="text" id="name" name="name" class="ml-8 w-5/6 h-9 text-lg text-black px-2 rounded-sm" required
+          <input type="text" id="name" name="name"
+            class="ml-8 w-5/6 h-9 text-lg text-black px-2 rounded-sm outline-none border-none focus:outline focus:outline-2 focus:outline-violet-500"
             autofocus>
         </div>
+        <div class="bg-red-800 ml-8 w-5/6 h-12 hidden items-center justify-center rounded-md" id="name__error">
+          Please enter your
+          name</div>
         <div class="flex flex-wrap mb-2">
           <label for="name" class="w-full my-3 text-xl">Email</label>
-          <input type="email" id="email" name="email" class="ml-8 w-5/6 h-9 text-lg text-black px-2 rounded-sm" required
-            placeholder="example@mail.com">
+          <input type="text" id="email" name="email"
+            class="ml-8 w-5/6 h-9 text-lg text-black px-2 rounded-sm outline-none border-none focus:outline focus:outline-2 focus:outline-violet-500">
         </div>
+        <div class="bg-red-800 ml-8 w-5/6 h-12 hidden items-center justify-center rounded-md" id="email__error">
+          Please enter a valid email</div>
         <div class="flex flex-wrap mb-2">
           <label for="name" class="w-full my-3 text-xl">Your Message</label>
-          <textarea name="message" required id="message" cols="30" rows="10"
-            class="ml-8 w-5/6 h-64 text-lg text-black px-2 rounded-sm"></textarea>
+          <textarea name="message" id="message" cols="30" rows="10"
+            class="ml-8 w-5/6 h-64 text-lg text-black px-2 rounded-sm outline-none border-none focus:outline focus:outline-2 focus:outline-violet-500"></textarea>
         </div>
+        <div class="bg-red-800 ml-8 w-5/6 h-12 hidden items-center justify-center rounded-md" id="message__error">
+          Your
+          message cannot be empty</div>
         <!-- Implement functionality for button -->
         <div class="mt-8 flex justify-end px-14">
           <button type="submit"
             class="bg-teal-700 text-lg w-16 py-1 text-center mx-3 rounded-sm border-2 border-teal-700 shadow-sm hover:bg-transparent  hover:text-teal-500">Send</button>
           <button type="reset"
             class="bg-violet-900 text-lg w-16 py-1 text-center border-2 border-violet-900 rounded-sm shadow-sm hover:bg-transparent  hover:text-violet-500">Clear</button>
+        </div>
+        <div class="bg-green-700 ml-8 w-5/6 h-12 hidden items-center justify-center rounded-md mt-8 mb-4" id="success">
+          Your message has been sent!
         </div>
       </form>
     </section>
@@ -106,6 +118,8 @@
     <p class="">Nathan M.S. | 3rd-Year SE</p>
   </footer>
   <script src="js/nav.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 
 </html>

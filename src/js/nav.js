@@ -14,9 +14,7 @@ liList.forEach(li => {
     if (innerAnchor.nodeType === 3) {
         innerAnchor = li.childNodes[1];
     }
-    console.log(innerAnchor)
     li.addEventListener('click', () => {
-        console.log(innerAnchor)
         innerAnchor.click();
     })
 })
