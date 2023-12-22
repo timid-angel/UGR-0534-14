@@ -113,8 +113,8 @@ function reset() {
     textareaField.value = "";
 }
 
-// main function to send the email
-function sendEmail(formData) {
+// main function to send the email - requires SMTP.JS
+/* function sendEmail(formData) {
     Email.send({
         Host: "smtp.elasticemail.com",
         Username: "formmail87@gmail.com",
@@ -128,7 +128,7 @@ function sendEmail(formData) {
             showSuccess();
         })
         .catch(err => console.log(err));
-}
+} */
 
 // event listeners and handlers for the buttons
 form.addEventListener('submit', (event) => {
@@ -148,7 +148,7 @@ form.addEventListener('submit', (event) => {
         showDataValidationError(errObj);
         return;
     }
-    sendEmail(msgObj);
+    // sendEmail(msgObj);
 })
 
 form.addEventListener('reset', (event) => {
