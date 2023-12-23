@@ -7,41 +7,60 @@
   <meta name="author" content="Nathan Mesfin">
   <meta name="description" content="Web Portfolio">
   <link rel="icon" href="images/pageicon_code-1.png">
+  <link rel="stylesheet" href="css/public.css">
   <title>Places</title>
 </head>
 
-<body>
-  <header class="header">
+<body class="text-primary bg-dark">
+  <header class="navbar navbar-brand bg-dark container-fluid border-bottom border-light">
     <a href="index.html">
-      <picture class="header__picture">
-        <img src="images/man.png" alt="Person Icon" width="100" height="100">
+      <picture class="navbar-brand ms-2">
+        <img src="images/man.png" alt="Person Icon" width="55" height="55" class="img-fluid">
       </picture>
     </a>
-    <nav class="header__nav">
-      <ul>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="places.html">Contact</a></li>
+    <nav class="navbar-nav ms-auto mb-lg-0 me-3 d-none d-md-block h5">
+      <ul class="navbar-nav ms-auto mb-lg-0 d-flex flex-row">
+        <li class="nav-item mx-2"><a class="nav-link text-secondary" href="cv.html">CV</a></li>
+        <li class="nav-item mx-2"><a class="nav-link text-secondary" href="projects.html">Projects</a></li>
+        <li class="nav-item mx-2"><a class="nav-link text-secondary" href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="d-md-none me-3" id="navbutton">
+      <img src="images/icons8-menu.svg" alt="A Menu Icon" width="60" height="60">
+    </div>
   </header>
-  <main>
+  <nav class="d-none d-md-none text-center bg-info border-bottom border-light" id="menu">
+    <ul class="navbar-nav ms-auto mb-lg-0 d-flex flex-column text-secondary h5">
+      <li class="nav-item pb-1">
+        <a class="nav-link" href="cv.html">CV</a>
+      </li>
+      <li class="nav-item pb-1">
+        <a class="nav-link" href="projects.html">Projects</a>
+      </li>
+      <li class="nav-item pb-1">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <main class="bg-dark container-xxl">
     <!-- PLACES TO GO -->
     <!-- NORWAY -->
-    <h2 class="places__h2">Places in the Bucket List</h2>
-    <article class="places__article">
-      <h3 class="places__article-h3">Tromsø</h3>
-      <picture class="places__article-picture">
-        <img src="images/northern_lights.jpg" alt="A picutre of the northern lights" width="1200" height="750">
+    <h2 class="display-3 fw-normal text-center mt-2 mb-3">Places in the Bucket List</h2>
+    <article class="row d-flex align-items-center mb-4">
+      <h3 class="h2 text-secondary col-12 text-center">Tromsø</h3>
+      <picture class="col-12 col-md-6 col-lg-7 text-center p-4 pt-2">
+        <img src="images/northern_lights.jpg" alt="A picutre of the northern lights" width="1200" height="750"
+          class="img-fluid">
       </picture>
-      <aside class="places__article-aside">
-        <p class="places__article-aside-p">
-          Situated in Norway, Tromsø is largely regarded to be the best place to watch Aurora Borealis, better known as
+      <aside class="col-12 col-md-6 col-lg-5 text-center px-4">
+        <p>
+          Situated in Norway, Tromsø is largely regarded to be the best place to watch Aurora Borealis, better known
+          as
           the Northern Lights. These pillars of light are caused by the charged particles emitted from the sun whose
           interaction with the Earth's atmosphere causes emissions in the visible light spectrum. Moreover, Norway is
           also popular for the following:
         </p>
-        <ul class="places__article-aside-ul">
+        <ul class="list-unstyled mx-auto ps-4">
           <li><em>Bergen</em>: A picturesque coastal city with colorful houses along the waterfront</li>
           <li><em>Jotunheimen National Park</em>: Norway's largest national park with numerous trails for hiking</li>
           <li><em>Oslo</em>: Norway's capital; houses the Viking Ship Museum, the Munch Museum, and the Royal Palace
@@ -50,18 +69,20 @@
       </aside>
     </article>
     <!-- ICELAND -->
-    <article class="places__article">
-      <h3 class="places__article-h3">Reykjavik</h3>
-      <picture class="places__article-picture">
-        <img src="images/black_beach.jpg" alt="A picture of a black beach" width="1280" height="780">
+    <article class="row d-flex align-items-center mb-4">
+      <h3 class="h2 text-secondary col-12 text-center">Reykjavik</h3>
+      <picture class="col-12 col-md-6 col-lg-7 text-center p-4 pt-2">
+        <img src="images/black_beach.jpg" alt="A picture of a black beach" width="1280" height="780" class="img-fluid">
       </picture>
-      <aside class="places__article-aside">
-        <p class="places__article-aside-p">
-          Iceland's capital city, popular for its geothermal energy, museums and architectural delights. Being a country
-          of high volcanic activity, Iceland's shores are lined with basalt columns and beaches made of volcanic rocks,
+      <aside class="col-12 col-md-6 col-lg-5 text-center px-4">
+        <p>
+          Iceland's capital city, popular for its geothermal energy, museums and architectural delights. Being a
+          country
+          of high volcanic activity, Iceland's shores are lined with basalt columns and beaches made of volcanic
+          rocks,
           giving the illusion of a "Black Beach".
         </p>
-        <ul class="places__article-aside-ul">
+        <ul class="list-unstyled mx-auto ps-4">
           <li>Geothermal Fissures, Waterfalls and Hotsprings</li>
           <li>Vast Glacial Landscapes</li>
           <li>Unique Tundra Wildlife</li>
@@ -69,33 +90,36 @@
       </aside>
     </article>
     <!-- SOF OMAR -->
-    <article class="places__article">
-      <h3 class="places__article-h3">Sof Omar</h3>
-      <picture class="places__article-picture">
-        <img src="images/sof_omar.webp" alt="A picture of Sof Omar" width="1280" height="780">
+    <article class="row d-flex align-items-center mb-4">
+      <h3 class="h2 text-secondary col-12 text-center">Sof Omar</h3>
+      <picture class="col-12 col-md-6 col-lg-7 text-center p-4 pt-2">
+        <img src="images/sof_omar.webp" alt="A picture of Sof Omar" width="1280" height="780" class="img-fluid">
       </picture>
-      <aside class="places__article-aside">
-        <p class="places__article-aside-p">
-          Carved out of limestone by Weyib River, Sof Omar is one of the world's largest cave systems. The caves are of
-          great historical and religious significance to the local population and has served as one of the most popular
+      <aside class="col-12 col-md-6 col-lg-5 text-center px-4">
+        <p>
+          Carved out of limestone by Weyib River, Sof Omar is one of the world's largest cave systems. The caves are
+          of
+          great historical and religious significance to the local population and has served as one of the most
+          popular
           tourist destinations in Ethiopia.
         </p>
-        <ul class="places__article-aside-p">
+        <ul class="list-unstyled mx-auto ps-4">
           <li>Chamber of Columns</li>
           <li>Annual Festival that draws pilgrims and visitors from different parts of the country</li>
         </ul>
       </aside>
     </article>
     <!-- PLACES I'VE BEEN TO -->
-    <h2 class="places__h2">Places I've Visited</h2>
+    <h2 class="display-3 fw-normal text-center mt-2 mb-3">Places I've Visited</h2>
     <!-- 40 MINCH -->
-    <article class="places__article">
-      <h3 class="places__article-h3">Arba Minch</h3>
-      <picture class="places__article-picture">
-        <img src="images/40_minch.jpg" alt="A picture of 40 Minch's Landscape" width="1280" height="720">
+    <article class="row d-flex align-items-center mb-4">
+      <h3 class="h2 text-secondary col-12 text-center">Arba Minch</h3>
+      <picture class="col-12 col-md-6 col-lg-7 text-center p-4 pt-2">
+        <img src="images/40_minch.jpg" alt="A picture of 40 Minch's Landscape" width="1280" height="720"
+          class="img-fluid">
       </picture>
-      <aside class="places__article-aside">
-        <p class="places__article-aside-p">
+      <aside class="col-12 col-md-6 col-lg-5 text-center px-4">
+        <p>
           Located in the south western region of Ethiopia, Arba Minch is a town with plenty gifts from mother nature.
           The most popular one being a thin strip of land separating two lakes, locally known as "The Bridge of God".
           The
@@ -105,23 +129,25 @@
       </aside>
     </article>
     <!-- TELKIYE -->
-    <article class="places__article">
-      <h3 class="places__article-h3">Teklehaiymanot Monastery</h3>
-      <picture class="places__article-picture">
-        <img src="images/t_mon.jpg" alt="A distant picture of a Monastery" width="1280" height="720">
+    <article class="row d-flex align-items-center mb-4">
+      <h3 class="h2 text-secondary col-12 text-center">Teklehaiymanot Monastery</h3>
+      <picture class="col-12 col-md-6 col-lg-7 text-center p-4 pt-2">
+        <img src="images/t_mon.jpg" alt="A distant picture of a Monastery" width="1280" height="720" class="img-fluid">
       </picture>
-      <aside class="places__article-aside">
-        <p class="places__article-aside-p">
-          Overshadowed by the nearby Debre Libanos Monastery, Teklehaiymanot sits a few kilometers away from Fiche. The
+      <aside class="col-12 col-md-6 col-lg-5 text-center px-4">
+        <p>
+          Overshadowed by the nearby Debre Libanos Monastery, Teklehaiymanot sits a few kilometers away from Fiche.
+          The
           abscence of any roads forces travellers to go on a three-hour hike for a glance at the monastery, half of
           which is embedded on the side of a mountain.
         </p>
       </aside>
     </article>
   </main>
-  <footer class="footer">
-    <p class="footer__p">Nathan Mesfin Shiferaw | 3rd Year Software Engineering Student</p>
+  <footer class="bg-info text-center p-2">
+    <p class="p-1 m-0">Nathan M.S. | 3rd-Year SE</p>
   </footer>
+  <script src="js/nav.js"></script>
 </body>
 
 </html>

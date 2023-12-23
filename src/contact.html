@@ -7,72 +7,110 @@
   <meta name="author" content="Nathan Mesfin">
   <meta name="description" content="Web Portfolio">
   <link rel="icon" href="images/pageicon_code-1.png">
+  <link rel="stylesheet" href="css/public.css">
   <title>Contact</title>
 </head>
 
-<body>
-  <header class="header">
+<body class="text-primary bg-dark min-vh-100 d-flex flex-column justify-content-between">
+  <header class="navbar navbar-brand bg-dark container-fluid border-bottom border-light">
     <a href="index.html">
-      <picture class="header__picture">
-        <img src="images/man.png" alt="Person Icon" width="100" height="100">
+      <picture class="navbar-brand ms-2">
+        <img src="images/man.png" alt="Person Icon" width="55" height="55" class="img-fluid">
       </picture>
     </a>
-    <nav class="header__nav">
-      <ul>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="places.html">Places</a></li>
+    <nav class="navbar-nav ms-auto mb-lg-0 me-3 d-none d-md-block h5">
+      <ul class="navbar-nav ms-auto mb-lg-0 d-flex flex-row">
+        <li class="nav-item mx-2"><a class="nav-link text-secondary" href="cv.html">CV</a></li>
+        <li class="nav-item mx-2"><a class="nav-link text-secondary" href="projects.html">Projects</a></li>
+        <li class="nav-item mx-2"><a class="nav-link text-secondary" href="places.html">Places</a></li>
       </ul>
     </nav>
+    <div class="d-md-none me-3" id="navbutton">
+      <img src="images/icons8-menu.svg" alt="A Menu Icon" width="60" height="60">
+    </div>
   </header>
-  <main>
-    <section class="contact__section">
-      <h1 class="contact__h1">Contact Me</h1>
-      <!-- setup a proper action -->
-      <form action="https://httpbin.org/get" method="get" class="contact__form">
-        <div class="contact__form-nameDiv">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required autofocus>
-        </div>
-        <div class="contact__form-emailDiv">
-          <label for="name">Email</label>
-          <input type="email" id="email" name="email" required placeholder="example@mail.com">
-        </div>
-        <div class="contact__form-textareaDiv">
-          <label for="name">Your Message</label>
-          <textarea name="message" required id="message" cols="30" rows="10"></textarea>
-        </div>
-        <!-- Implement functionality for button -->
-        <button type="submit" class="button button--send">Send</button>
-        <button type="reset" class="button button--send">Clear</button>
-      </form>
-    </section>
-    <aside class="contact__aside">
-      <ul class="contact__aside-ul">
-        <!-- PHONE -->
-        <li>
-          <a href="tel:+251929115104">
-            <img src="images/phone_icon.png" alt="An icon of a phone" width="50" height="50">
-          </a>
-        </li>
-        <!-- EMAIL -->
-        <li>
-          <a href="mailto:natms24@gmail.com">
-            <img src="images/email_icon.png" alt="An icon of an open envelope" width="50" height="50">
-          </a>
-        </li>
-        <!-- TELEGRAM -->
-        <li>
-          <a href="https://t.me/the1StardustCrusader" target="_blank">
-            <img src="images/telegram_icon.png" alt="Telegram Logo" width="50" height="50">
-          </a>
-        </li>
-      </ul>
-    </aside>
+  <nav class="d-none d-md-none text-center bg-info border-bottom border-light" id="menu">
+    <ul class="navbar-nav ms-auto mb-lg-0 d-flex flex-column text-secondary h5">
+      <li class="nav-item pb-1">
+        <a class="nav-link" href="cv.html">CV</a>
+      </li>
+      <li class="nav-item pb-1">
+        <a class="nav-link" href="projects.html">Projects</a>
+      </li>
+      <li class="nav-item pb-1">
+        <a class="nav-link" href="places.html">Places</a>
+      </li>
+    </ul>
+  </nav>
+  <main class="bg-dark container-xxl">
+    <div class="row align-items-center justify-content-center">
+      <section class="col-10 col-md-7">
+        <h1 class="display-3 fw-normal text-center mt-2 mb-3">Contact Me</h1>
+        <!-- setup a proper action -->
+        <form method="get" id="contact__form">
+          <div class="mb-4">
+            <label class="form-label fs-5" for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" autofocus>
+          </div>
+          <div class="bg-warning d-none d-flex align-items-center justify-content-center rounded my-4 py-3"
+            id="name__error">
+            Please enter your
+            name</div>
+          <div class="mb-4">
+            <label class="form-label fs-5" for="name">Email</label>
+            <input type="text" class="form-control" id="email" name="email">
+          </div>
+          <div class="bg-warning d-none d-flex align-items-center justify-content-center rounded my-4 py-3"
+            id="email__error">
+            Please enter a valid email</div>
+          <div class="mb-4">
+            <label class="form-label fs-5" for="name">Your Message</label>
+            <textarea name="message" id="message" class="form-control" cols="30" rows="10"></textarea>
+          </div>
+          <div class="bg-warning d-none d-flex align-items-center justify-content-center rounded my-4 py-3"
+            id="message__error">
+            Your message cannot be empty
+          </div>
+          <!-- Implement functionality for button -->
+          <div class="d-flex justify-content-end my-4">
+            <button type="submit" class="btn rounded btn-secondary text-white mx-2 px-3 pb-2">Send</button>
+            <button type="reset" class="btn rounded btn-danger mx-2 px-3 pb-2">Clear</button>
+          </div>
+          <div class="bg-black d-none d-flex align-items-center justify-content-center rounded my-4 py-3" id="success">
+            Your message has been sent!
+          </div>
+        </form>
+      </section>
+      <aside class="col-12 col-md-3 d-flex justify-content-center my-4">
+        <ul class="list-unstyled d-flex flex-md-column">
+          <!-- PHONE -->
+          <li class="m-4">
+            <a href="tel:+251929115104">
+              <img src="images/phone_icon.png" alt="An icon of a phone" width="65" height="65">
+            </a>
+          </li>
+          <!-- EMAIL -->
+          <li class="m-4">
+            <a href="mailto:natms24@gmail.com">
+              <img src="images/email_icon.png" alt="An icon of an open envelope" width="65" height="65">
+            </a>
+          </li>
+          <!-- TELEGRAM -->
+          <li class="m-4">
+            <a href="https://t.me/the1StardustCrusader" target="_blank">
+              <img src="images/telegram_icon.png" alt="Telegram Logo" width="65" height="65">
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </div>
   </main>
-  <footer class="footer">
-    <p class="footer__p">Nathan Mesfin Shiferaw | 3rd Year Software Engineering Student</p>
+  <footer class="bg-info text-center p-2">
+    <p class="p-1 m-0">Nathan M.S. | 3rd-Year SE</p>
   </footer>
+  <script src="js/nav.js"></script>
+  <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+  <script src="js/contact.js"></script>
 </body>
 
 </html>

@@ -7,98 +7,131 @@
   <meta name="author" content="Nathan Mesfin">
   <meta name="description" content="Web Portfolio">
   <link rel="icon" href="images/pageicon_code-1.png">
+  <link rel="stylesheet" href="css/public.css">
   <title>Home</title>
 </head>
 
-<body>
-  <header class="header">
-    <picture class="header__picture">
-      <img src="images/man.png" alt="Person Icon" width="100" height="100">
+<body class="text-primary bg-dark">
+  <header class="navbar navbar-brand bg-dark container-fluid border-bottom border-light">
+    <picture class="navbar-brand ms-2">
+      <img src="images/man.png" alt="Person Icon" width="55" height="55" class="img-fluid">
     </picture>
-    <nav class="header__nav">
-      <ul>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="places.html">Places</a></li>
-        <li><a href="contact.html">Contact</a></li>
+    <nav class="navbar-nav ms-auto mb-lg-0 me-3 d-none d-md-block h5">
+      <ul class="navbar-nav ms-auto mb-lg-0 d-flex flex-row">
+        <li class="nav-item mx-2"><a class="nav-link text-secondary" href="cv.html">CV</a></li>
+        <li class="nav-item mx-2"><a class="nav-link text-secondary" href="projects.html">Projects</a></li>
+        <li class="nav-item mx-2"><a class="nav-link text-secondary" href="places.html">Places</a></li>
+        <li class="nav-item mx-2"><a class="nav-link text-secondary" href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="d-md-none me-3" id="navbutton">
+      <img src="images/icons8-menu.svg" alt="A Menu Icon" width="60" height="60">
+    </div>
   </header>
-  <main>
+  <nav class="d-none d-md-none text-center bg-info border-bottom border-light" id="menu">
+    <ul class="navbar-nav ms-auto mb-lg-0 d-flex flex-column text-secondary h5">
+      <li class="nav-item pb-1">
+        <a class="nav-link" href="cv.html">CV</a>
+      </li>
+      <li class="nav-item pb-1">
+        <a class="nav-link" href="projects.html">Projects</a>
+      </li>
+      <li class="nav-item pb-1">
+        <a class="nav-link" href="places.html">Places</a>
+      </li>
+      <li class="nav-item pb-1">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <main class="bg-dark container-xxl">
     <!-- INTRODUCTION -->
-    <h1 class="home__h1">Greetings!</h1>
-    <article class="home__article">
-      <h2 class="home__article-h2">About Me</h2>
-      <p class="home__article-p">
-        My name is Nathan Mesfin. I am a third-year Software Engineering
-        student at Addis Ababa University. Visit my
-        <a href="cv.html">Curriculum Vitae</a> page for better insight into my
-        professional life.
-      </p>
-      <picture class="home__article-picture">
-        <img src="images/browser.png" alt="Profile Illustration" width="400" height="400">
+    <h1 class="display-1 text-center mt-2">Greetings!</h1>
+    <article class="row d-flex align-items-center mt-4">
+      <div class="col-12 col-md-8 text-center">
+        <h2 class="h2">About Me</h2>
+        <p class="px-1 px-md-4 fs-5">
+          My name is Nathan Mesfin. I am a third-year Software Engineering
+          student at Addis Ababa University. Visit my
+          <a href="cv.html" class="nav-link d-inline text-secondary">Curriculum Vitae</a> page for better insight into
+          my
+          professional life.
+        </p>
+      </div>
+      <picture class="col-12 col-md-4 text-center">
+        <img src="images/browser.png" alt="Profile Illustration" width="225" height="225">
       </picture>
     </article>
     <!-- INTRESTS -->
-    <article class="home__article">
-      <h2 class="home__article-h2">My Interests</h2>
-      <p class="home__article-p">
-        When I'm not focusing on my studies, I find myself reading mystery
-        books, listening to music and learning the German language.
-        <em>Einen schönen Tag!</em>
-      </p>
-      <picture class="home__article-picture">
-        <img src="images/hobby.png" alt="Pictures of hobbies" width="400" height="400">
+    <article class="row d-flex flex-row-reverse align-items-center mt-5">
+      <div class="col-12 col-md-8 text-center">
+        <h2 class="h2">My Interests</h2>
+        <p class="px-1 px-md-4 fs-5">
+          When I'm not focusing on my studies, I find myself reading mystery
+          books, listening to music and learning the German language.
+          <em>Einen schönen Tag!</em>
+        </p>
+      </div>
+      <picture class="col-12 col-md-4 text-center">
+        <img src="images/hobby.png" alt="Pictures of hobbies" width="225" height="225">
       </picture>
     </article>
     <!-- BOOKS -->
-    <article class="home__article--books">
-      <h2 class="home__article-h2--books">My Favorite Reads</h2>
-      <figure class="home__article-figure--books">
-        <img src="images/books_LOTR.jpg" alt="LOTR Book Cover" width="360" height="540">
+    <article class="row mt-5 justify-content-center">
+      <h2 class="h1 text-secondary col-12 text-center mb-3">My Favorite Reads</h2>
+      <figure class="col-12 col-md-6 col-lg-5 text-center fs-5 my-3">
+        <img src="images/books_LOTR.jpg" alt="LOTR Book Cover" width="360" height="540"
+          class="border border-2 border-danger p-1">
         <figcaption>The Lord of the Rings Triology</figcaption>
       </figure>
-      <figure class="home__article-figure--books">
-        <img src="images/books_ATTWN.avif" alt="And Then There Were None Book Cover" width="360" height="540">
+      <figure class="col-12 col-md-6 col-lg-5 text-center fs-5 my-3">
+        <img src="images/books_ATTWN.avif" alt="And Then There Were None Book Cover" width="360" height="540"
+          class="border border-2 border-danger p-1">
         <figcaption>And Then There Were None</figcaption>
       </figure>
-      <figure class="home__article-figure--books">
-        <img src="images/books_BOE.webp" alt="Blood of Elves Book Cover" width="360" height="540">
+      <figure class="col-12 col-md-6 col-lg-5 text-center fs-5 my-3">
+        <img src="images/books_BOE.webp" alt="Blood of Elves Book Cover" width="360" height="540"
+          class="border border-2 border-danger p-1">
         <figcaption>Blood of Elves</figcaption>
       </figure>
-      <figure class="home__article-figure--books">
-        <img src="images/books_DOTN.jpg" alt="Death on the Nile Book Cover" width="360" height="540">
+      <figure class="col-12 col-md-6 col-lg-5 text-center fs-5 my-3">
+        <img src="images/books_DOTN.jpg" alt="Death on the Nile Book Cover" width="360" height="540"
+          class="border border-2 border-danger p-1">
         <figcaption>Death on the Nile</figcaption>
       </figure>
     </article>
     <!-- MUSIC -->
-    <article class="home__article--music">
-      <h2 class="home__article-h2--music">My Favorite Listens</h2>
-      <figure class="home__article-figure--music">
-        <img src="images/music_black-parade.jpg" alt="Black Parade Album Cover" width="400" height="400">
+    <article class="row mt-5 mb-3 justify-content-center px-lg-5">
+      <h2 class="h1 text-secondary col-12 text-center mb-3">My Favorite Listens</h2>
+      <figure class="col-12 col-md-6 col-lg-5 text-center fs-5 my-3">
+        <img src="images/music_black-parade.jpg" alt="Black Parade Album Cover" width="350" height="350"
+          class="border border-3 border-info p-2">
         <figcaption>Black Parade by My Chemical Romance</figcaption>
       </figure>
-      <figure class="home__article-figure--music">
-        <img src="images/music_black-country-new-road.webp" alt="Ants From Up There Album Cover" width="400"
-          height="400">
+      <figure class="col-12 col-md-6 col-lg-5 text-center fs-5 my-3">
+        <img src="images/music_black-country-new-road.webp" alt="Ants From Up There Album Cover" width="350"
+          height="350" class="border border-3 border-info p-2">
         <figcaption>Ants From Up There by Black Country, New Road</figcaption>
       </figure>
-      <figure class="home__article-figure--music">
+      <figure class="col-12 col-md-6 col-lg-5 text-center fs-5 my-3">
         <img src="images/music_dragon-new-moutain-i-believe-in-you.jpg"
-          alt="Dragon New Mountain I Believe In You Album Cover" width="400" height="400">
+          alt="Dragon New Mountain I Believe In You Album Cover" width="350" height="350"
+          class="border border-3 border-info p-2">
         <figcaption>
           Dragon New Mountain I Believe In You by Big Thief
         </figcaption>
       </figure>
-      <figure class="home__article-figure--music">
-        <img src="images/music_the-glow.jpg" alt="The Glow Pt.2 Album Cover" width="400" height="400">
+      <figure class="col-12 col-md-6 col-lg-5 text-center fs-5 my-3">
+        <img src="images/music_the-glow.jpg" alt="The Glow Pt.2 Album Cover" width="350" height="350"
+          class="border border-3 border-info p-2">
         <figcaption>The Glow Pt.2 by The Microphones</figcaption>
       </figure>
     </article>
   </main>
-  <footer class="footer">
-    <p class="footer__p">Nathan Mesfin Shiferaw | 3rd Year Software Engineering Student</p>
+  <footer class="bg-info text-center p-2">
+    <p class="p-1 m-0">Nathan M.S. | 3rd-Year SE</p>
   </footer>
+  <script src="js/nav.js"></script>
 </body>
 
 </html>
